@@ -1,0 +1,9 @@
+informationcollapse 無料版への切替
+
+1. Google AI Studio https://aistudio.google.com/apikey で無料枠のGemini APIキーを作成する。
+2. GitHubの informationcollapse → Settings → Secrets and variables → Actions に GEMINI_API_KEY として登録。
+3. このZIPの中身をGitHub公開リポジトリのルートに配置して、既存ファイルを更新する（特に engine/generate.py と .github/workflows/archives.yml）。Working CopyではCommit→Push。
+4. GitHub Actions → Informationcollapse — write and publish → Run workflow を一度実行する。
+5. Actionsのログと data/stats.json の ai_generated_count で成功を確認。
+
+注意: OpenAI APIの課金は不要。有料プランに切り替えない。Gemini無料枠が上限に達したときはAI生成のみ休止。外部の文章は取得可能な範囲で継続。

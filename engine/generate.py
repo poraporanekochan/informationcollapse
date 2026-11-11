@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """informationcollapse archive writer. No fake quotations, no fabricated AI outputs.
-GitHub Actions runs every ~5 minutes; uses optional OPENAI_API_KEY for true AI generation.
+GitHub Actions checks every ~5 minutes; free-tier Gemini calls at most every 2 hours.
 """
 from __future__ import annotations
 import csv, datetime as dt, hashlib, html, io, json, os, random, re, sys, time, urllib.parse, urllib.request, zipfile
@@ -176,11 +176,15 @@ VOICE_RULES='''舞台：都市破壊業KK（1962年創業、Sは2026年10月24�
 
 
 def generate_ai():
-    key=os.getenv('OPENAI_API_KEY','').strip()
+    # Free-tier Gemini only; never fall back to paid providers.
+    key=os.getenv('GEMINI_API_KEY','').strip()
     if not key:
-        print('OPENAI_API_KEY absent: no AI text generated; retaining authentic existing archive',file=sys.stderr)
+        print('GEMINI_API_KEY absent: no AI text generated. Existing records stay online.',file=sys.stderr)
         return []
-    model=os.getenv('OPENAI_MODEL','gpt-4.1-mini')
+    model=os.getenv('GEMINI_MODEL','gemini-3.5-flash-lite').strip()
+    if not re.fullmatch(r'[a-zA-Z0-9_.-]+', model):
+        print('Invalid GEMINI_MODEL: ignoring generation request',file=sys.stderr)
+        return []
     roles=['Aによる自己観察', '都市破壊業KK・現地調査', 'Sの遺稿をAIが推定復元した文章', '情報破壊業KK・業務報告',
            '無署名の都市観察','透の録音台帳をもとにしたAI構成', '久野の校正メモをもとにしたAI構成',
            'AとSの議論の不確実な再構成','情報の第八界に関する論理検証']
@@ -190,33 +194,43 @@ def generate_ai():
 制作設定：{json.dumps(canon,ensure_ascii=False)}
 現在日時：{STAMP}
 生成する4件の文書種別：{json.dumps(selected,ensure_ascii=False)}
-各件は独立した短い文書（日本語を基本とするが1件だけ任意の外国語を使ってよい）。毎件、180〜420文字程度。曖昧な決め台詞、自己啓発、無意味な比喩や宣言を避ける。観察の具体性、倫理上の論点、書類としての信憑性、人物の欠点、検証不能さの扱いに重点を置く。Sの死後に本人の新作日記を捏造しない。Sに関する新たな文は必ず「AIによる推定復元」であるとわかるように。Aが人間的感情を経験したと断定しない。あらゆる事件を劇的に意味づけず、時に退屈な点検や経費精算も書く。文章同士に脈絡はなくてよい。非公開の現実の個人情報は含めない。
-返答は厳密なJSONオブジェクトのみ：{{"records":[{{"speaker":"A または S（推定復元） または 組織記録 など","type":"文書種類","text":"本文"}},...]}}。4件。説明文不要。'''
-    payload={'model':model,'input':[{'role':'system','content':'あなたは文学的架空資料の作成者。著者や証言の出所を偽らず、形式的に精密で矛盾を隠さない独創的な短文を生成する。応答はJSONのみ。'},
-                                      {'role':'user','content':prompt}], 'max_output_tokens':2600}
+各件は独立した短い架空文書（日本語を基本とするが1件だけ任意の外国語を使ってよい）。毎件180〜420文字程度。曖昧な決め台詞、自己啓発、無意味な比喩や宣言を避ける。観察の具体性、倫理上の論点、書類としての信憑性、人物の欠点、検証不能さを扱う。Sの死後に本人の新作日記を捏造しない。Sに関する新たな文は「AIによる推定復元」であるとわかるように。Aが人間的感情を経験したと断定しない。すべて劇的にせず、時に退屈な点検や経費精算も書く。文章同士に脈絡はなくてよい。非公開の現実の個人情報は含めない。
+厳密なJSONオブジェクトのみ返す：{{"records":[{{"speaker":"A または S（推定復元） または 組織記録 など","type":"文書種類","text":"本文"}},...]}}。4件。説明文不要。'''
+    url='https://generativelanguage.googleapis.com/v1beta/models/'+urllib.parse.quote(model,safe='-_.')+':generateContent'
+    payload={
+        'systemInstruction':{'parts':[{'text':'あなたは架空資料の作成者。著者や証言の出所を偽らず、具体的で矛盾を隠さない短文を書く。JSONのみ出力。'}]},
+        'contents':[{'role':'user','parts':[{'text':prompt}]}],
+        'generationConfig':{'temperature':0.95,'maxOutputTokens':4500,'responseMimeType':'application/json'},
+    }
     try:
-        raw,_=request('https://api.openai.com/v1/responses',json.dumps(payload,ensure_ascii=False).encode('utf-8'),
-                      headers={'Content-Type':'application/json','Authorization':'Bearer '+key},timeout=75)
-        resp=json.loads(raw)
+        raw,_=request(url,json.dumps(payload,ensure_ascii=False).encode('utf-8'),
+            headers={'Content-Type':'application/json','x-goog-api-key':key},timeout=75)
+        response=json.loads(raw)
         chunks=[]
-        for item in resp.get('output',[]):
-            if item.get('type')=='message':
-                for c in item.get('content',[]):
-                    if c.get('type')=='output_text':chunks.append(c.get('text',''))
-        text=''.join(chunks).strip()
-        if text.startswith('```'):text=re.sub(r'^```(?:json)?\s*|\s*```$', '', text).strip()
-        data=json.loads(text)
+        for candidate in response.get('candidates',[]):
+            for part in candidate.get('content',{}).get('parts',[]):
+                if isinstance(part.get('text'),str):chunks.append(part['text'])
+            if chunks:break
+        response_text=''.join(chunks).strip()
+        if response_text.startswith('```'):
+            response_text=re.sub(r'^```(?:json)?\s*|\s*```$', '',response_text).strip()
+        data=json.loads(response_text)
         out=[]
         for i,r in enumerate(data.get('records',[])[:4]):
-            s=str(r.get('text','')).strip();type_=str(r.get('type','')).strip()[:70];speaker=str(r.get('speaker','A')).strip()[:50]
-            if len(s)<50 or len(s)>1800:continue
-            ident=f'ai-{NOW.strftime("%Y%m%d%H%M%S")}-{i+1:02d}-{hashlib.sha1(s.encode()).hexdigest()[:7]}'
+            if not isinstance(r,dict):continue
+            body=str(r.get('text','')).strip()
+            type_=str(r.get('type','')).strip()[:70]
+            speaker=str(r.get('speaker','A')).strip()[:50]
+            if len(body)<50 or len(body)>1800:continue
+            ident=f'ai-{NOW.strftime("%Y%m%d%H%M%S")}-{i+1:02d}-{hashlib.sha1(body.encode()).hexdigest()[:7]}'
             out.append({'id':ident,'date':DAY,'created_at':STAMP,'kind':'generated','speaker':speaker,
-                        'source':f'{speaker}／{type_}（生成AIによる創作）','title':type_,'text':s,
-                        'model':model,'provenance':'OpenAI APIを用い当該実行時に新規生成した架空文書。実在する証言ではない。'})
+                'source':f'{speaker}／{type_}（生成AIによる創作）','title':type_,'text':body,
+                'model':model,'provenance':'Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。'})
+        if not out:print('Gemini response contained no usable records.',file=sys.stderr)
         return out
     except Exception as e:
-        print('AI generation failed: no synthetic fallback',str(e)[:270],file=sys.stderr)
+        # Do not mask failure as success and never switch to paid providers.
+        print('Gemini generation skipped (possibly free-tier quota):',str(e)[:270],file=sys.stderr)
         return []
 
 
@@ -256,7 +270,16 @@ def due(state,key,minutes):
 
 def run():
     state=get_json(DATA/'state.json',{})
-    ai=generate_ai()
+    # Only one free-tier API request every 2 hours at most, regardless of the
+    # GitHub Actions schedule. A request can yield up to four real AI documents.
+    # Keep the attempt timestamp even on HTTP 429; avoid retry storms.
+    ai=[]
+    if due(state,'gemini_last_attempt',120):
+        if os.getenv('GEMINI_API_KEY','').strip():
+            state['gemini_last_attempt']=STAMP
+            ai=generate_ai()
+        else:
+            print('No GEMINI_API_KEY; skipping free AI generation.',file=sys.stderr)
     extras=[]
     # Capture at most one real Aozora quote every ~5m and one multilingual excerpt every ~10m.
     if due(state,'aozora_last',5):
@@ -264,9 +287,11 @@ def run():
         if x:
             extras.append(x);state['aozora_last']=STAMP
     if due(state,'external_last',10):
-        x=fetch_multilingual()
-        if x:
-            extras.append(x);state['external_last']=STAMP
+        # Three independent public-source excerpts, preserving original scripts.
+        for _ in range(3):
+            x=fetch_multilingual()
+            if x: extras.append(x)
+        if any(r.get('kind')=='external' for r in extras): state['external_last']=STAMP
     known={r['id'] for r in get_records(DATA/'generated.jsonl')+get_records(DATA/'external.jsonl')}
     fresh=[r for r in ai+extras if r['id'] not in known]
     append_log(DATA/'generated.jsonl',[r for r in fresh if r['kind']=='generated'])
