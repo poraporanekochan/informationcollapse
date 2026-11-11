@@ -1,0 +1,59 @@
+name: Informationcollapse — write and publish
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: informationcollapse
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Write genuine new records, if scheduled or manually triggered
+        if: github.event_name != 'push'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
+        run: python engine/generate.py
+      - name: Refresh counters
+        if: github.event_name == 'push'
+        run: python engine/generate.py --rebuild
+      - name: Commit archival mutations
+        if: github.event_name != 'push'
+        run: |
+          git config user.name 'informationcollapse[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A archive data
+          if [ -d cache ]; then git add -A cache; fi
+          if ! git diff --cached --quiet; then
+            git commit -m "record: $(date -u +%Y%m%dT%H%M%SZ)"
+            git push origin HEAD:main
+          fi
+      - name: Prepare static public files
+        run: |
+          mkdir -p _publish
+          cp index.html _publish/
+          cp -r assets data archive _publish/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _publish
+      - id: deployment
+        uses: actions/deploy-pages@v4
