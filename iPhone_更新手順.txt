@@ -1,0 +1,22 @@
+informationcollapse v4 更新手順（iPhone）
+
+【既存の記録を消さないこと】
+このZIPは、プログラム変更分だけです。data/ と archive/ は含めていません。
+既存の data/ や archive/ を削除したり、「すべて置換」で消したりしないでください。
+
+1) ZIPを「ファイル」アプリに保存して解凍。
+2) Working Copyで、GitHubに接続済みの informationcollapse リポジトリを開く。
+3) ZIPの階層を保って次を追加・上書き。
+   上書き: README.md, assets/stream.js, engine/generate.py, .github/workflows/archives.yml
+   新規追加: engine/catalog.py, engine/verify.py, tests/test_pipeline.py, tests/test_reader.js
+   ※ .github はドットで始まる隠しフォルダ。フォルダごと取り込む。
+4) Commit → Push。
+5) https://github.com/poraporanekochan/informationcollapse/actions
+   最新の push 実行の緑チェックを確認。Python/JSテストに失敗すると公開が停止する（旧版は残る）。
+6) https://github.com/poraporanekochan/informationcollapse/blob/main/data/catalog.json
+   record_count が表示されれば全件索引がGitHubへ保存された証拠。
+7) 手動 Run workflow を一度実行。data/health.json の new と各 source の status を確認。
+8) https://poraporanekochan.github.io/informationcollapse/ をSafariで再読み込み。
+
+※ GitHub Appsの接続が読み取り専用のため、こちらで直接Pushした状態ではありません。
+※ Geminiの有料請求を有効にするとGoogle側で料金が発生する場合があります。無料枠のまま利用してください。

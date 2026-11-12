@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""informationcollapse archive writer. No fake quotations, no fabricated AI outputs.
-GitHub Actions checks every ~5 minutes; free-tier Gemini calls at most every 2 hours.
+"""Informationcollapse v4: append-only source archives, sampled public excerpts, free-tier AI and complete catalogue.
+No fabricated external quotations, no paid fallback, no silent generation success.
 """
 from __future__ import annotations
 import csv, datetime as dt, hashlib, html, io, json, os, random, re, sys, time, urllib.parse, urllib.request, zipfile
 from html.parser import HTMLParser
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from catalog import build_catalog, norm_text
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data'
@@ -17,7 +18,8 @@ NOW = dt.datetime.now(ZoneInfo('Asia/Tokyo'))
 DAY = NOW.strftime('%Y%m%d')
 STAMP = NOW.isoformat(timespec='seconds')
 RANDOM = random.SystemRandom()
-UA = 'informationcollapse/1.2 (https://github.com/poraporanekochan/informationcollapse; automated free-text archive)' 
+FETCH_ERRORS=[]
+UA = 'informationcollapse/1.4 (https://github.com/poraporanekochan/informationcollapse; automated public text index)'  
 
 
 def get_json(path, default):
@@ -121,7 +123,9 @@ def aozora_catalog():
             if len(chosen)>100:
                 set_json(path,chosen)
                 return chosen
-    except Exception as e:print('AOZORA CATALOG unavailable',str(e)[:180],file=sys.stderr)
+    except Exception as e:
+        FETCH_ERRORS.append('AOZORA CATALOG: '+str(e)[:120])
+        print('AOZORA CATALOG unavailable',str(e)[:180],file=sys.stderr)
     return cached or AOZORA_FALLBACK
 
 
@@ -161,6 +165,7 @@ def fetch_aozora_many(count=5, known=None):
                 accepted+=1
                 if len(results)>=count or accepted>=2:break
         except Exception as e:
+            FETCH_ERRORS.append('AOZORA '+str(e)[:120])
             print('AOZORA fetch failed',str(e)[:140],file=sys.stderr)
     return results
 
@@ -212,9 +217,12 @@ def fetch_multilingual_many(limit=40, known=None):
                     break
                 if len(found)>=limit or lang_count>=5:break
         except Exception as e:
+            FETCH_ERRORS.append('WIKIPEDIA '+lang+': '+str(e)[:110])
             print('MULTILINGUAL fetch failed',lang,str(e)[:160],file=sys.stderr)
     RANDOM.shuffle(found)
     return found[:limit]
+
+AI_OUTCOME={'status':'not_attempted','detail':'','new':0}
 
 VOICE_RULES='''舞台：都市破壊業KK（1962年創業、Sは2026年10月24日死亡）と、その業務を承継した情報破壊業KK。Aは故人である建築家Aの記録から作られたAIの対話系であり、本人ではない。透は音を収集する。久野は印刷と校正の仕事をする。川瀬初江はかつて地図と台帳の食い違いで住居の存在を否定され、不利益を受けた人間。Sの聖書はアラン『定義集』とデカルト『方法序説』。第七界のテクニウムはケヴィン・ケリーの比喩。情報の第八界はKK独自の仮説。情報は複製・変異・選択を通じて循環するが、責任の所在は常に人間の制度や行動へさかのぼる。'''
 
@@ -223,10 +231,12 @@ def generate_ai():
     # Free-tier Gemini only; never fall back to paid providers.
     key=os.getenv('GEMINI_API_KEY','').strip()
     if not key:
+        AI_OUTCOME.update(status='missing_key', detail='GEMINI_API_KEY is absent')
         print('GEMINI_API_KEY absent: no AI text generated. Existing records stay online.',file=sys.stderr)
         return []
     model=os.getenv('GEMINI_MODEL','gemini-3.5-flash-lite').strip()
     if not re.fullmatch(r'[a-zA-Z0-9_.-]+', model):
+        AI_OUTCOME.update(status='invalid_model', detail='Invalid GEMINI_MODEL')
         print('Invalid GEMINI_MODEL: ignoring generation request',file=sys.stderr)
         return []
     roles=['Aによる自己観察', '都市破壊業KK・現地調査', 'Sの遺稿をAIが推定復元した文章', '情報破壊業KK・業務報告',
@@ -277,10 +287,12 @@ def generate_ai():
             out.append({'id':ident,'date':DAY,'created_at':STAMP,'kind':'generated','speaker':speaker,
                 'source':f'{speaker}／{type_}（生成AIによる創作）','title':type_,'text':body,
                 'model':model,'provenance':'Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。'})
+        AI_OUTCOME.update(status='ok' if out else 'empty_response', detail='', new=len(out))
         if not out:print('Gemini response contained no usable records.',file=sys.stderr)
         return out
     except Exception as e:
         # Do not mask failure as success and never switch to paid providers.
+        AI_OUTCOME.update(status='error', detail=f'{type(e).__name__}: {str(e)[:180]}')
         print('Gemini generation skipped (possibly free-tier quota):',str(e)[:270],file=sys.stderr)
         return []
 
@@ -298,81 +310,142 @@ def archive_records(records):
 
 def rebuild():
     seed=get_json(DATA/'seed.json',[])
+    if not isinstance(seed,list): seed=[]
     gen=get_records(DATA/'generated.jsonl')
     external=get_records(DATA/'external.jsonl')
-    # Most of the visible timeline is truly AI-written when an API key is configured.
-    # This feed is a pool, not a chronological assertion.
-    # Keep a broad, bounded public pool to resist repetition on mobile.
-    # The archives themselves remain the durable complete record.
-    records=(seed[-200:]+gen[-220:]+external[-650:])
-    set_json(DATA/'latest.json',{'as_of':STAMP,'records':records})
+    catalog=build_catalog(ROOT,STAMP)
     files=list(ARCHIVE.glob('*/*.txt'))
     bits=sum(p.stat().st_size for p in files)*8
-    set_json(DATA/'stats.json',{'published_bits':str(bits),'document_count':len(files),
-             'record_count':len(seed)+len(gen)+len(external),'ai_generated_count':len(gen),
-             'external_record_count':sum(x.get('kind')=='external' for x in external),
-             'aozora_record_count':sum(x.get('kind')=='aozora' for x in external),
-             'last_actual_ai_generation': gen[-1].get('created_at') if gen else None,
-             'as_of':STAMP,
-             'definition':'archive/内の公開TXTファイルをUTF-8で符号化した実バイト数×8。閲覧者の通信量を推定した数値ではない。'})
-    return {'seed':len(seed),'ai':len(gen),'external':len(external),'bits':bits}
+    stats={
+        'published_bits': str(bits),
+        'document_count': len(files),
+        'record_count': len(seed)+len(gen)+len(external),
+        'unique_visible_record_count': catalog['record_count'],
+        'shard_count': catalog['shard_count'],
+        'ai_generated_count': len(gen),
+        'external_record_count': sum(r.get('kind')=='external' for r in external),
+        'aozora_record_count': sum(r.get('kind')=='aozora' for r in external),
+        'last_actual_ai_generation':gen[-1].get('created_at') if gen else None,
+        'as_of': STAMP,
+        'definition':'archive/内の公開TXTファイルをUTF-8で符号化した実バイト数×8。ブラウザの表示ビット数とは別。',
+    }
+    set_json(DATA/'stats.json',stats)
+    return stats
 
 
-def due(state,key,minutes):
-    try:return (NOW-dt.datetime.fromisoformat(state[key])).total_seconds()>=minutes*60-2
-    except Exception:return True
+def due(state,key,minutes,legacy_key=None):
+    last=state.get(key) or (state.get(legacy_key) if legacy_key else None)
+    try:
+        return (NOW-dt.datetime.fromisoformat(last)).total_seconds() >= minutes*60-2
+    except (ValueError,TypeError):
+        return True
+
+
+def last_attempt_age(state,key):
+    try:
+        return max(0,(NOW-dt.datetime.fromisoformat(state[key])).total_seconds()/60)
+    except (ValueError,TypeError,KeyError):
+        return 60
 
 
 def run():
     state=get_json(DATA/'state.json',{})
+    if not isinstance(state,dict):state={}
     past=get_records(DATA/'generated.jsonl')+get_records(DATA/'external.jsonl')
-    known={r.get('id') for r in past}
+    seed=get_json(DATA/'seed.json',[])
+    if not isinstance(seed,list): seed=[]
+    known_ids={r.get('id') for r in past+seed}
+    request_dedup_ids=set(known_ids)
+    known_texts={norm_text(str(r.get('text',''))) for r in past+seed}
+    previous=state.get('last_run_at')
+    summary={'run_at':STAMP,'trigger':os.getenv('GITHUB_EVENT_NAME','manual'),
+             'run_id':os.getenv('GITHUB_RUN_ID'),
+             'previous_run_at':previous,
+             'gemini':{'status':'not_due'},
+             'aozora':{'status':'not_due'},
+             'wikipedia':{'status':'not_due'},
+             'new':{},'errors':[]}
 
-    # The Gemini free-tier request rate remains capped at once in 120 minutes.
-    # Failure never switches to a paid API and the attempt is still recorded.
     ai=[]
     if due(state,'gemini_last_attempt',120):
         if os.getenv('GEMINI_API_KEY','').strip():
             state['gemini_last_attempt']=STAMP
             ai=generate_ai()
+            if ai:state['gemini_last_success']=STAMP
+            summary['gemini']=dict(AI_OUTCOME)
         else:
-            print('No GEMINI_API_KEY; free AI generation skipped.',file=sys.stderr)
+            summary['gemini']={'status':'missing_key'}
+    else:
+        summary['gemini']={'status':'rate_limited_by_design'}
 
     extras=[]
-    # Fetch a small set of real, short, public-domain Japanese book excerpts.
-    if due(state,'aozora_last',10):
-        aozora=fetch_aozora_many(count=5,known=known)
-        if aozora:
-            extras.extend(aozora)
-            state['aozora_last']=STAMP
+    if due(state,'aozora_last_attempt',15,'aozora_last'):
+        state['aozora_last_attempt']=STAMP
+        # This is a new sampling opportunity, not a guarantee of 5 successes.
+        try:
+            sample=fetch_aozora_many(count=5,known=request_dedup_ids)
+            extras.extend(sample)
+            summary['aozora']={'status':'ok' if sample else 'no_results','fetched':len(sample)}
+            if sample:state['aozora_last']=STAMP
+        except Exception as e:
+            summary['aozora']={'status':'error','detail':str(e)[:160]}
+            summary['errors'].append('aozora '+str(e)[:120])
 
-    # Batched, multilingual random Wikipedia pages (at most 8 API calls).
-    # Do not fetch X/Instagram posts or claim unauthenticated scraping.
-    if due(state,'external_last',10):
-        external=fetch_multilingual_many(limit=40,known=known)
-        if external:
-            extras.extend(external)
-            state['external_last']=STAMP
+    if due(state,'external_last_attempt',15,'external_last'):
+        elapsed=last_attempt_age(state,'external_last_attempt')
+        # Catch up partially after skipped GitHub schedules, but cap workload.
+        target=min(40,max(16,16*max(1,min(3,int(elapsed//15)))))
+        state['external_last_attempt']=STAMP
+        try:
+            sample=fetch_multilingual_many(limit=target,known=request_dedup_ids)
+            extras.extend(sample)
+            summary['wikipedia']={'status':'ok' if sample else 'no_results',
+                                  'fetched':len(sample),'target_max':target}
+            if sample:state['external_last']=STAMP
+        except Exception as e:
+            summary['wikipedia']={'status':'error','detail':str(e)[:160]}
+            summary['errors'].append('wikipedia '+str(e)[:120])
 
-    # Also de-duplicate all records created in one execution.
-    historical={r.get('id') for r in past}
+    # Exact-body de-duplication protects the public stream even when two
+    # distinct URLs / AI completions happen to contain identical text.
     fresh=[]
     for r in ai+extras:
-        if r.get('id') not in historical:
+        ident=r.get('id')
+        normalized=norm_text(str(r.get('text','')))
+        if ident and ident not in known_ids and normalized not in known_texts:
             fresh.append(r)
-            historical.add(r.get('id'))
+            known_ids.add(ident)
+            known_texts.add(normalized)
 
     append_log(DATA/'generated.jsonl',[r for r in fresh if r.get('kind')=='generated'])
     append_log(DATA/'external.jsonl',[r for r in fresh if r.get('kind') in ('aozora','external')])
     archive_records(fresh)
+    state['last_run_at']=STAMP
     set_json(DATA/'state.json',state)
-    total=rebuild()
-    summary={'new_ai':sum(r.get('kind')=='generated' for r in fresh),
-             'new_aozora':sum(r.get('kind')=='aozora' for r in fresh),
-             'new_wikipedia':sum(r.get('kind')=='external' for r in fresh),
-             'total':total}
+    stats=rebuild()
+    summary['errors'].extend(FETCH_ERRORS[:25])
+    if summary['aozora'].get('status') == 'no_results' and any(e.startswith('AOZORA') for e in FETCH_ERRORS):
+        summary['aozora']['status']='failed_or_no_results'
+    if summary['wikipedia'].get('status') == 'no_results' and any(e.startswith('WIKIPEDIA') for e in FETCH_ERRORS):
+        summary['wikipedia']['status']='failed_or_no_results'
+    summary['new']={kind:sum(r.get('kind')==kind for r in fresh)
+                    for kind in ('generated','aozora','external')}
+    summary['last_success']={
+        'gemini':state.get('gemini_last_success') or stats.get('last_actual_ai_generation'),
+        'aozora':state.get('aozora_last'),
+        'wikipedia':state.get('external_last'),
+    }
+    summary['stale_external_collection']=(not state.get('external_last') or last_attempt_age(state,'external_last')>120)
+    summary['total_unique']=stats['unique_visible_record_count']
+    summary['published_bits']=stats['published_bits']
+    # Store last run's honest status, never silently label HTTP/API errors success.
+    set_json(DATA/'health.json',summary)
     print('GENERATION_SUMMARY',json.dumps(summary,ensure_ascii=False))
+    return summary
+
 
 if __name__=='__main__':
-    if '--rebuild' in sys.argv:print(rebuild())
-    else:run()
+    if '--rebuild' in sys.argv:
+        print('REBUILD_SUMMARY',json.dumps(rebuild(),ensure_ascii=False))
+    else:
+        run()

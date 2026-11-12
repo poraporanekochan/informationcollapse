@@ -1,64 +1,52 @@
-# informationcollapse
+# informationcollapse — 第八界 / v4
 
-情報破壊業KKの公開記録庫。**生成AIが新たに書く文書**を主とし、Sの創作遺稿、青空文庫の著作権消滅作品、複数言語の公開ページの一文が混入する作品です。
+情報破壊業KKの公開記録庫。架空のA・Sの記録、実際にGemini無料枠で生成した文章、青空文庫の著作権消滅作品からの抜粋、多言語Wikipediaの短い原文を混在させる。**架空の資料と、実際に取得した引用は、必ず別々の種類・出典で記録する。**
 
-## 最初の公開
+公開サイト： https://poraporanekochan.github.io/informationcollapse/
 
-1. GitHubに **公開** リポジトリ `informationcollapse` を新規作成する。既存の `private-data` には置かない。
-2. このZIPの中身をリポジトリの `main` ブランチ直下へアップロードする（ZIPファイルそのものではなく展開後のファイル）。`.github/workflows/archives.yml` も含める。多数のファイルを扱う場合はGitクライアントで一括 push する。
-3. Settings → Pages → Build and deployment → Source を **GitHub Actions** に設定する。
-4. [Google AI Studio](https://aistudio.google.com/apikey) で**無料枠のAPIキー**を取得し、GitHubの Settings → Secrets and variables → Actions → Repository secrets に `GEMINI_API_KEY` として登録する。公開ファイルには絶対に書かない。OpenAI APIキーは不要。
-5. Actions → `Informationcollapse — write and publish` → Run workflow を一度実行する。Actionsが利用でき、権限設定が整っていれば以降はおよそ5分ごとに実行する。
-6. サイトURL（ユーザー名 `poraporanekochan` の場合）は `https://poraporanekochan.github.io/informationcollapse/`。公開前にこのURLが存在するとは限らない。
+## v4 で直したこと
 
-## 表示仕様
+1. **全文書を表示対象にする。** 従来の `data/latest.json` は抜粋だけを保持していた。v4では `data/catalog.json` と `data/shards/<kind>/<hash>.json` を生成し、`data/seed.json`・`data/generated.jsonl`・`data/external.jsonl` の**全構造化文書**を索引化する。ブラウザは必要なデータ片だけを取得する。古い日付の文書も対象に残る。
+2. **重複表示を防ぐ。** IndexedDBに読んだ記録のIDを保存し、全件を一巡するまで同じIDを再選択しない。古いv3の閲覧履歴も引き継ぐ。IndexedDBが無効な環境ではlocalStorageへフォールバックする（こちらは容量に制限がある）。履歴を消した端末や異なる端末間では重複防止は共有されない。
+3. **保存済み文書を消さない。** `archive/YYYY/YYYYMMDD.txt`、`data/generated.jsonl`、`data/external.jsonl` を追記する。表示用シャードだけを再生成する。重複テキストは表示索引から取り除くが、原記録は残す。
+4. **自動実行の時刻をずらす。** GitHub Actionsを毎時7・22・37・52分（UTC）に予定する。GitHubのスケジューラは遅延・省略・無効化されることがあるので、時刻どおりの実行は保証できない。長時間空いた場合、次回に取得件数を増やすが、失われた過去の時点の情報を復元するものではない。
+5. **成功と失敗を分ける。** `data/health.json` にGemini・青空文庫・Wikipediaの実行状況、追加件数、出典取得エラー、実行日時を残す。`data/stats.json` にはAI生成総件数などを表示する。Actionsの緑チェックはソフトウェアが正常終了したことだけを意味する。
+6. **費用ゼロ優先。** OpenAI有料APIにアクセスしない。Geminiは**無料枠に対応するモデル・無料設定のプロジェクト**に限って使用する。有料請求が有効なAPIキーで課金されないことはソフトウェア側で保証できないので、Google側で有料請求を有効にしない。Geminiは最大120分に1回・最大4文書。無料枠が尽きた場合も既存文書の閲覧と公的資料収集は継続可能。
+7. **検証する。** Actions実行前にPython/JavaScriptのオフラインテストを行い、公開前に索引の欠落・重複・公開bit数の不一致がないか検証する。
 
-- 白背景、黒字、明朝体、本文以外に小さなbit数と出典テキストのみ。
-- 1秒に3書記素（見かけの文字）表示。ブラウザのバックグラウンド制限により、完全な実時間保証ではない。
-- 文書生成を主とし、当該タブで5分ごとに青空文庫からの引用、10分ごとに多言語の公開情報を優先表示する。これは新たな生成ではなく、**実際に取得・保存できた公開記録**からの選択。
-- Sの死後に生成したSの文章は本人の原本と表示せず、推定復元した創作として扱う。
-- `公開記録bit` は `archive/YYYY/YYYYMMDD.txt` のファイルサイズ合計に8を掛けた値。転送量や世界中への拡散数ではない。
+## 大事な区別
 
-## 実際のAI生成について
+- 「**公開記録bit**」は `archive/` 以下のTXTファイルの実際のUTF-8バイト数×8。ウェブ全体に広がった情報量という意味ではない。
+- GitHubでストックされるのは**実際に取得・生成して保存できた記録だけ**。画面でのランダム表示そのものは新たな情報の収集ではない。
+- Wikipediaの抽出元はMediaWiki API。**インターネット全体・X・Instagramの無作為抽出ではない。** 引用元URLと著作権条件は各記録に残す。Wikipediaの記事にはCC BY-SAによる再利用条件がある。
+- 青空文庫は著作権消滅フラグを持つ作品を選ぶが、外部サービスが取得に失敗した場合に文章を捏造しない。
+- `archive/` の手書きTXTの全段落を自動で再解析するものではない。表示対象は `seed.json` と二つのJSONLに保存された構造化記録の全件。構造化記録の原本TXTも従来どおり保存する。
+- ブラウザが読み込む文書は世界中の閲覧者で同一の公開ストックを共有するが、**各閲覧者の表示順は独立**している。
+- 第三者が取得する文章の内容は予測・制御できない。公開前の人手による全件確認は自動化していない。個人情報や不適切な内容が混入する可能性は残るため、定期的な内容監査が必要。
 
-- GitHub Actionsは5分ごとに外部資料の取得を試み、**AI生成は最大2時間に1回**4件の独立文書の生成を試みる。APIエラー、スケジュール遅延、アカウントの利用上限などで欠ける場合がある。無限・秒単位の更新保証ではない。
-- `GEMINI_API_KEY` が設定されていない場合、**新規AI文章は生成されない**。既存の創作記録だけを表示する。画面上で「AIが書き続けている」と偽る実装は行っていない。
-- APIキー以外の生成元テキスト、公開ページのURL、ライセンス情報はGitHub上に残る。
-- `GEMINI_MODEL` をRepository variablesに設定するとモデルを変更できる（初期値 `gemini-3.5-flash-lite`）。**必ず無料枠に対応したモデルを選ぶこと**。
-- 生成・取得内容は公開される。個人情報や秘密のプロジェクト資料を入れないこと。
+## iPhone / Working Copy で更新する
 
-## 外部文の出典
+1. `informationcollapse_v4_update.zip` をiPhoneに保存して解凍する。
+2. ZIP内の**元のフォルダ階層を保持したまま**、既存の `informationcollapse` Gitリポジトリの直下に移す。`assets/stream.js` と `engine/generate.py` と `.github/workflows/archives.yml`、`README.md` は置き換え、`engine/catalog.py`・`engine/verify.py`・`tests/*` は新規追加。
+3. **`data/` と `archive/` は削除・置き換えしない。** ZIPには意図的にこれらを含めていない。
+4. Working Copyで変更をCommit→Push。
+5. GitHub Actions `Informationcollapse — write and publish` の**push実行**が成功すれば、`data/catalog.json` が作られたことを確認。問題がなければ **Run workflow** を一度実行し、`data/health.json` の `new` などを確認。
+6. Safariで公開サイトを再読み込み。1秒につき3文字の表示は以前と同じ。
 
-- 青空文庫：公式作品一覧から著作権消滅の作品のみ抽出し、原文の短い一文を引用。取得失敗時は引用を偽造しない。
-- 多言語：MediaWiki APIから複数言語のWikipedia記事の短い一文を選択。出典・CC BY-SAライセンスURLを保存。**インターネット全体からの完全一様抽選ではない**。
-- X/Instagramの投稿は、各サービスのAPI利用権限・転載条件が未確認なので初期版では取り込まない。
+## 動作確認用URL
 
-## 編集
+- Actions: https://github.com/poraporanekochan/informationcollapse/actions
+- 全件索引: https://github.com/poraporanekochan/informationcollapse/blob/main/data/catalog.json
+- 稼働状況: https://github.com/poraporanekochan/informationcollapse/blob/main/data/health.json
+- 公開件数: https://github.com/poraporanekochan/informationcollapse/blob/main/data/stats.json
+- 外部文章: https://github.com/poraporanekochan/informationcollapse/blob/main/data/external.jsonl
+- AI文章: https://github.com/poraporanekochan/informationcollapse/blob/main/data/generated.jsonl
 
-- `archive/` は年別の生資料（ファイル名はYYYYMMDD.txt）。
-- `data/seed.json` は架空の初期記録、`data/generated.jsonl` は実際にAIが生成した記録、`data/external.jsonl` は外部ソースから取得した引用。
-- `engine/generate.py` が生成・収集・出典保存・統計を担当。
-- `assets/stream.js` が閲覧用の文字表示と優先表示を担当。
-- 内容が重なるほど、Sの正体が決定不可能になることを作品の主題とする。事実としての引用と創作記録をデータ上は厳密に区別する。
+`data/catalog.json` の `record_count` と `data/stats.json` の `unique_visible_record_count` が一致しており、Actionsの `Verify record retention and public catalogue` が緑色なら、構造化全文書の公開索引は整合している。
 
-## 料金ゼロを優先する運用（2026年11月）
+## 運用上の限界
 
-- GitHub Pagesと公開リポジトリの標準GitHub Actionsは無料の範囲で使える。GitHubの利用規約・実行時間等の制限は適用される。
-- Gemini APIの無料枠にはモデル別・プロジェクト別の回数制限があり、超過するとHTTP 429などで生成をスキップする。**必ず継続生成される保証はない。**
-- この版は有料OpenAI APIを一切呼び出さず、自動課金を伴う別サービスへも切り替えない。無料枠で使えるキー・モデルで運用し、Google側で有料プランを有効化しないこと。
-- Gemini API無料枠に送った創作テキストはサービス改善に利用される場合がある。公開前提の架空記録だけを使い、私的な情報や未公開の個人情報を含めない。
-- 動作確認: `data/stats.json` の `ai_generated_count` が増えたらGeminiで本当に生成された。`data/external.jsonl` の記録が増えれば外部からの引用取得に成功。
-
-- 多言語の外部引用は約10分ごとに最大3件を試行する（取得失敗時は減る）。無料枠のAI生成とは独立している。
-
-
-## v3 — ランダム収集・重複抑制（2026-11-12）
-
-- 新しい文章を取得するたび、実際の出典・原文・URLを記録する。ネット全体の一様抽出ではなく、Wikipedia多言語記事と著作権切れの青空文庫を利用する。
-- Wikimedia APIへの呼び出しは最大8言語・逐次実行・10分以上の間隔で抑制。1回に最大40件のWikipedia短文を収集する（全件取得を保証しない）。
-- 青空文庫は最大5短文を取得。カタログ障害時も特定作品の範囲内で異なる一文を選ぶ。
-- 無料Gemini APIの最大1回/2時間という抑制は維持する。APIキーがなければ外部公開文章だけ収集する。
-- ブラウザ側は文章を一周するまで原則として同じ記録を表示しない。表示履歴はそのブラウザ内のlocalStorageに保存する。別ブラウザ・履歴削除後には共有されない。
-- Wikipedia等の出典が明示され、権利表記を併記する。X・Instagramを無断収集していると称しない。
-- 毎回の取得は実行ログ `GENERATION_SUMMARY` を参照する。`data/stats.json` に `external_record_count` と `aozora_record_count` が追加される。
-- GitHub ActionsのスケジュールはGitHub側の遅延や省略がありうるため、実際の新規収集回数は必ずしも設定どおりにならない。
+- GitHub Actionsの実行はベストエフォート。公開リポジトリが60日間非アクティブの場合、スケジュールが自動無効化される可能性がある。
+- GitHub Pagesは帯域・容量等のサービス上限の対象。無期限・無制限保存を保証しない。現状のTXTはGitHubの履歴に残るが、別サービスへの二重バックアップではない。
+- 採録源はWikipediaと青空文庫を中心にした限定的な範囲であり、ライセンス条件やAPI規約の変化に応じたメンテナンスが必要。
+- 認証情報はGitHub Secretsの `GEMINI_API_KEY` のみ。**ZIPや公開ファイルへ鍵を記載しない。**

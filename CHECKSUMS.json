@@ -1,0 +1,47 @@
+[
+  {
+    "path": ".github/workflows/archives.yml",
+    "sha256": "90530b7f23c4c2a370319a121035de6f1b06fdab4ed72d01fa2d4d2029a41f9e",
+    "bytes": 3283
+  },
+  {
+    "path": "README.md",
+    "sha256": "f7be329d4d7d0238b760c1e39c876f9ec31c4a6f3a4eb95eb56a8e5553ec3261",
+    "bytes": 6898
+  },
+  {
+    "path": "iPhone_更新手順.txt",
+    "sha256": "b294b48c1ccc7f87fb78525a19d7c4a2d41aef63053f37b2bbb36be0894a3345",
+    "bytes": 1663
+  },
+  {
+    "path": "assets/stream.js",
+    "sha256": "4a4b7c8b7e0f0ea4697225dbd537027f67bce2a95a60624d589895907a7b23f6",
+    "bytes": 10396
+  },
+  {
+    "path": "engine/generate.py",
+    "sha256": "338be241b4a04ba914de421900bdc0736e47451295b23621be80347fafc52431",
+    "bytes": 23291
+  },
+  {
+    "path": "engine/catalog.py",
+    "sha256": "f4a2d5c2a8dda46b71ab9029bbf9250f877d351e5311e9554afd4d4d4ba34664",
+    "bytes": 5403
+  },
+  {
+    "path": "engine/verify.py",
+    "sha256": "5a333901565d5cf7154a78116bf796f20e008340c7d476356633459055c28d99",
+    "bytes": 2181
+  },
+  {
+    "path": "tests/test_pipeline.py",
+    "sha256": "98e6747d54c775ee0cff327b3e937402d14bcc9378519a8cbb565a4f2a29eb6b",
+    "bytes": 4820
+  },
+  {
+    "path": "tests/test_reader.js",
+    "sha256": "efcb373ed1d7fde66a6a0047f2820b33c82b1101b44ef2b3c0f4adb575b0428d",
+    "bytes": 2795
+  }
+]

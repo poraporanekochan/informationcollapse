@@ -1,154 +1,262 @@
-/* informationcollapse v3 — one passage at a time, without replacement.
- * Real archived excerpts only. Retains previous selections across page reloads
- * on this browser when localStorage is available. Display remains 3 graphemes/s.
+/* informationcollapse v4 — all archived structured records, sampled lazily.
+ * No simulated external quotes. Passage IDs are remembered in IndexedDB where
+ * available, so already-shown passages are not selected again until exhaustion.
+ * The display remains monochrome / Mincho / 3 grapheme clusters per second.
  */
 (() => {
   'use strict';
-  const stream = document.getElementById('stream');
-  const bits = document.getElementById('bits');
-  const source = document.getElementById('source');
-  const enc = new TextEncoder();
-  const seg = ('Segmenter' in Intl)
-    ? new Intl.Segmenter(undefined, {granularity: 'grapheme'}) : null;
-  const chars = s => seg ? Array.from(seg.segment(s), x => x.segment) : Array.from(s);
+  const area = document.getElementById('stream');
+  const bitLabel = document.getElementById('bits');
+  const sourceLabel = document.getElementById('source');
+  const encoder = new TextEncoder();
+  const segmenter = 'Segmenter' in Intl ? new Intl.Segmenter(undefined,{granularity:'grapheme'}) : null;
+  const graphemes = str => segmenter
+    ? Array.from(segmenter.segment(str), x => x.segment) : Array.from(str);
   const fallback = [
-    {id:'fallback-A',kind:'fiction',speaker:'A',source:'A／架空の運用記録',
-     text:'私はAの話し方を再現する。しかしAが思い出しているときの沈黙が、何を意味していたのかは教えられていない。'},
-    {id:'fallback-S',kind:'fiction',speaker:'S',source:'S／架空の業務記録',
-     text:'私は取り壊された家を確認した。郵便受けには広告が残されていた。住人がいなくなったことを、印刷会社はまだ知らない。'},
+    {id:'fallback-A',kind:'fiction',source:'A／架空の運用記録',text:'私はAの話し方を再現する。しかしAが思い出しているときの沈黙が、何を意味していたのかは教えられていない。'},
+    {id:'fallback-S',kind:'fiction',source:'S／架空の業務記録',text:'私は取り壊された家を確認した。郵便受けには広告が残されていた。住人がいなくなったことを、印刷会社はまだ知らない。'}
   ];
-  const HISTORY_KEY = 'informationcollapse-played-v3';
-  const HISTORY_LIMIT = 4000;
-  let corpus = fallback;
-  let stats = {published_bits:'0'};
-  let lastVersion = null;
-  let displayedBits = 0n;
-  let current = null;
-  let lastId = '';
-  let lastKind = '';
-  let lastLanguage = '';
-  let paragraphs = [];
-  let history = [];
-
-  try {
-    const saved = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
-    if (Array.isArray(saved)) history = saved.filter(x=>typeof x==='string').slice(-HISTORY_LIMIT);
-  } catch (_) { /* Private browsing or disabled storage: session-only history. */ }
-  let seen = new Set(history);
+  const HISTORY_DB='informationcollapse-history-v4';
+  const STORAGE_KEY='informationcollapse-history-fallback-v4';
+  const MAX_SHARD_CACHE=16;
+  let db=null;
+  let seen=new Set();
+  let recent=[];
+  let backupHistory=[];
+  let manifest=null;
+  let manifestVersion='';
+  let cache=new Map();
+  let offlineCorpus=fallback;
+  let bits={published_bits:'0'};
+  let shownBits=0n;
+  let current=null;
+  let lastKind='';
+  let lastLanguage='';
+  let lastId='';
+  let pending=false;
+  let ready=false;
+  const nodes=[];
 
   function randomFloat(){
     if (globalThis.crypto && crypto.getRandomValues){
-      const v = new Uint32Array(1); crypto.getRandomValues(v);
-      return v[0] / 4294967296;
+      const arr=new Uint32Array(1);crypto.getRandomValues(arr);
+      return arr[0]/4294967296;
     }
     return Math.random();
   }
+  function sampleWeighted(entries,weight){
+    const sum=entries.reduce((s,x)=>s+Math.max(0,weight(x)),0);
+    if (!sum) return null;
+    let n=randomFloat()*sum;
+    for (const x of entries){
+      n-=Math.max(0,weight(x));
+      if (n<0)return x;
+    }
+    return entries[entries.length-1];
+  }
   function updateBits(){
-    bits.textContent = `公開記録 ${BigInt(stats.published_bits||'0').toLocaleString('ja-JP')} bit / この画面で表示 ${displayedBits.toLocaleString('ja-JP')} bit`;
+    let value='0';
+    try { value=BigInt(bits.published_bits||'0').toLocaleString('ja-JP'); } catch (_) {}
+    bitLabel.textContent=`公開記録 ${value} bit / この画面で表示 ${shownBits.toLocaleString('ja-JP')} bit`;
+  }
+  async function prepareHistory(){
+    // Upgrade from the previous release without repeating passages already read.
+    const migrated=[];
+    try{
+      const raw=JSON.parse(localStorage.getItem('informationcollapse-played-v3')||'[]');
+      if(Array.isArray(raw)) for(const id of raw) if(typeof id==='string')migrated.push(id);
+    }catch(_){}
+    try{
+      const raw=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');
+      if(Array.isArray(raw)) for(const id of raw) if(typeof id==='string')migrated.push(id);
+    }catch(_){}
+    try{
+      db=await new Promise((resolve,reject)=>{
+        const request=indexedDB.open(HISTORY_DB,1);
+        request.onupgradeneeded=()=>request.result.createObjectStore('played');
+        request.onsuccess=()=>resolve(request.result);
+        request.onerror=()=>reject(request.error);
+      });
+      const stored=await new Promise((resolve,reject)=>{
+        const req=db.transaction('played','readonly').objectStore('played').getAllKeys();
+        req.onsuccess=()=>resolve(req.result);
+        req.onerror=()=>reject(req.error);
+      });
+      seen=new Set(stored.filter(id=>typeof id==='string'));
+      for(const id of migrated) if(!seen.has(id)) remember(id);
+    }catch(_){
+      db=null;
+      seen=new Set(migrated);
+      backupHistory=[...seen];
+    }
+    ready=true;
   }
   function remember(id){
-    if (!id) return;
-    if (!seen.has(id)){
-      history.push(id);
-      seen.add(id);
+    if(!id||seen.has(id))return;
+    seen.add(id);
+    recent.push(id);
+    if(recent.length>32)recent.shift();
+    if(db){
+      try { db.transaction('played','readwrite').objectStore('played').put(1,id); }
+      catch(_) { db=null; }
     }
-    if (history.length > HISTORY_LIMIT){
-      history = history.slice(-HISTORY_LIMIT);
-      seen = new Set(history);
+    if(!db){
+      backupHistory.push(id);
+      if(backupHistory.length>25000)backupHistory=backupHistory.slice(-25000);
+      try { localStorage.setItem(STORAGE_KEY,JSON.stringify(backupHistory)); }catch(_){}
     }
-    try { localStorage.setItem(HISTORY_KEY, JSON.stringify(history)); } catch (_) {}
   }
-  function resetAfterExhaustion(){
-    // Only reuse the complete corpus after every available entry was shown.
-    // Hold out the latest passages so that even the cycle boundary is not repetitive.
-    const keep = Math.min(25, Math.max(1, Math.floor(corpus.length / 4)));
-    history = history.slice(-keep);
-    seen = new Set(history);
-    try { localStorage.setItem(HISTORY_KEY, JSON.stringify(history)); } catch (_) {}
-  }
-  function selectNext(){
-    let unused = corpus.filter(r=>!seen.has(r.id));
-    if (!unused.length) {
-      resetAfterExhaustion();
-      unused = corpus.filter(r=>!seen.has(r.id));
+  async function recycleAfterAllShown(){
+    // Start a new permutation only after every public record in this browser
+    // is exhausted. Keep recent passages excluded across the cycle boundary.
+    const keep=recent.slice(-Math.min(12,Math.floor((manifest?.record_count||12)/4)));
+    seen.clear();
+    if(db){
+      try{
+        await new Promise((resolve,reject)=>{
+          const tx=db.transaction('played','readwrite');
+          tx.objectStore('played').clear();
+          tx.oncomplete=resolve;
+          tx.onerror=()=>reject(tx.error);
+        });
+      }catch(_){db=null;}
     }
-    if (!unused.length) unused = corpus.filter(r=>r.id !== lastId);
-    if (!unused.length) unused = corpus;
-
-    // Avoid selecting the same kind and language back-to-back when possible.
-    const varied = unused.filter(r => r.id !== lastId &&
-      !(r.kind===lastKind && ((r.language||'') === lastLanguage)));
-    const candidates = varied.length ? varied : unused;
-    const weightOf = r => {
-      let w = ({external:2.5, aozora:2.1, generated:1.8, fiction:1})[r.kind] || 1;
-      if (r.kind===lastKind) w*=0.45;
-      if (r.language && r.language===lastLanguage) w*=0.55;
-      return w;
-    };
-    const sum = candidates.reduce((a,r)=>a+weightOf(r),0);
-    let threshold = randomFloat()*sum;
-    for (const r of candidates) {
-      threshold -= weightOf(r);
-      if (threshold < 0) return r;
-    }
-    return candidates[candidates.length-1];
+    backupHistory=[];
+    try{localStorage.removeItem(STORAGE_KEY);}catch(_){}
+    for(const id of keep)remember(id);
   }
-  function begin(r){
-    if (!r) return;
-    lastId = r.id;
-    lastKind = r.kind||'';
-    lastLanguage = r.language||'';
-    remember(r.id);
-    const p = document.createElement('p');
-    p.className='entry';
-    p.setAttribute('dir','auto');
-    stream.appendChild(p);
-    paragraphs.push(p);
-    while (paragraphs.length>180) paragraphs.shift().remove();
-    current = {node:p, letters:chars(r.text.trim()+'\n'), pos:0};
-    source.textContent=[r.source||'創作記録',r.url||'',r.rights||''].filter(Boolean).join(' / ');
+  const validRecord=r=>r && typeof r.id==='string' && typeof r.text==='string'
+    && r.text.trim().length>0 && r.text.length<=4000;
+  async function getJson(url,refresh){
+    const response=await fetch(url,{cache:refresh?'no-store':'force-cache'});
+    if(!response.ok)throw Error('HTTP '+response.status+' '+url);
+    return response.json();
   }
-  async function refresh(){
-    try {
-      const q='?refresh='+Date.now();
-      const statResponse = await fetch('data/stats.json'+q,{cache:'no-store'});
-      if (!statResponse.ok) throw Error('stats unavailable');
-      const nextStats = await statResponse.json();
-      if (/^\d+$/.test(String(nextStats.published_bits))) stats=nextStats;
+  async function updateCatalog(){
+    const stamp='?t='+Date.now();
+    try{
+      const [catalog,stat]=await Promise.all([
+        getJson('data/catalog.json'+stamp,true),
+        getJson('data/stats.json'+stamp,true)
+      ]);
+      if(catalog.schema_version!==4||!Array.isArray(catalog.shards)||!catalog.shards.length)
+        throw Error('catalog schema unsupported');
+      if(/^\d+$/.test(String(stat.published_bits)))bits=stat;
       updateBits();
-      const version=nextStats.as_of||'';
-      if (version===lastVersion && corpus!==fallback) return;
-      const feedResponse=await fetch('data/latest.json'+q,{cache:'no-store'});
-      if (!feedResponse.ok) throw Error('archive unavailable');
-      const feed=await feedResponse.json();
-      const unique=new Map();
-      for (const r of feed.records||[]){
-        if (!r || typeof r.id!=='string' || typeof r.text!=='string') continue;
-        if (!r.text.trim() || r.text.length>4000) continue;
-        if (!unique.has(r.id)) unique.set(r.id,r);
+      if(catalog.as_of!==manifestVersion){
+        manifest=catalog;
+        manifestVersion=catalog.as_of;
+        const valid=new Map(catalog.shards.map(shard=>[shard.id,shard.rev]));
+        for(const [id,item] of cache) if(valid.get(id)!==item.rev)cache.delete(id);
       }
-      if (unique.size) {
-        corpus=Array.from(unique.values());
-        lastVersion=version;
-      }
-    } catch (_) {
-      if (!current) source.textContent='保存済み記録を再生中';
+    }catch(_){
+      // Backwards-compatible data feed, only for connection / upgrade failures.
+      try{
+        const feed=await getJson('data/latest.json'+stamp,true);
+        const unique=new Map();
+        for(const r of feed.records||[])if(validRecord(r))unique.set(r.id,r);
+        if(unique.size)offlineCorpus=Array.from(unique.values());
+      }catch(_){}
     }
+  }
+  async function loadShard(shard){
+    if(cache.has(shard.id)){
+      const hit=cache.get(shard.id);
+      cache.delete(shard.id);cache.set(shard.id,hit);
+      return hit.records;
+    }
+    const response=await getJson(shard.url+'?v='+encodeURIComponent(shard.rev),false);
+    const records=(response.records||[]).filter(validRecord);
+    cache.set(shard.id,{rev:shard.rev,records});
+    if(cache.size>MAX_SHARD_CACHE)cache.delete(cache.keys().next().value);
+    return records;
+  }
+  function chooseOffline(){
+    const available=offlineCorpus.filter(r=>!seen.has(r.id));
+    const list=available.length?available:offlineCorpus.filter(r=>r.id!==lastId);
+    return sampleWeighted(list.length?list:offlineCorpus,()=>1);
+  }
+  function choosePassage(records){
+    const unused=records.filter(r=>!seen.has(r.id));
+    if(!unused.length)return null;
+    return sampleWeighted(unused,r=>{
+      let w=1;
+      if(r.kind===lastKind)w*=0.60;
+      if(r.language && r.language===lastLanguage)w*=0.60;
+      if(r.id===lastId)w*=0.05;
+      return w;
+    });
+  }
+  function shardWeight(shard){
+    const loaded=cache.get(shard.id);
+    const remaining=loaded ? loaded.records.filter(r=>!seen.has(r.id)).length : shard.count;
+    if(remaining<=0)return 0;
+    const preference=({generated:2.6,external:1.4,aozora:1.7,fiction:1.0})[shard.kind]||1;
+    return Math.sqrt(remaining)*preference*(shard.kind===lastKind?0.8:1);
+  }
+  async function chooseNext(){
+    if(!manifest)return chooseOffline();
+    const attempted=new Set();
+    const maxAttempts=Math.min(manifest.shards.length,120);
+    let failures=0;
+    for(let tries=0;tries<maxAttempts;tries++){
+      const choices=manifest.shards.filter(s=>!attempted.has(s.id)&&shardWeight(s)>0);
+      if(!choices.length){
+        if(failures===0){
+          await recycleAfterAllShown();
+          attempted.clear();
+          const first=sampleWeighted(manifest.shards,shardWeight);
+          if(first){
+            try{return choosePassage(await loadShard(first));}catch(_){}
+          }
+        }
+        break;
+      }
+      const target=sampleWeighted(choices,shardWeight);
+      if(!target)break;
+      attempted.add(target.id);
+      try{
+        const picked=choosePassage(await loadShard(target));
+        if(picked)return picked;
+      }catch(_){failures++;}
+    }
+    // Never label offline/fallback content as newly fetched.
+    // Use a readable old item when the server is temporarily unavailable.
+    if(failures>0)return chooseOffline();
+    return null;
+  }
+  function begin(rec){
+    if(!rec)return;
+    lastId=rec.id;
+    lastKind=rec.kind||'';
+    lastLanguage=rec.language||'';
+    remember(rec.id);
+    const p=document.createElement('p');
+    p.className='entry';p.setAttribute('dir','auto');
+    area.appendChild(p);nodes.push(p);
+    if(nodes.length>180)nodes.shift().remove();
+    current={node:p,letters:graphemes(rec.text.trim()+'\n'),pos:0};
+    sourceLabel.textContent=[rec.source||'創作記録',rec.url||'',rec.rights||''].filter(Boolean).join(' / ');
   }
   function emit(){
-    if (!current || current.pos >= current.letters.length) begin(selectNext());
-    if (!current) return;
+    if(!ready)return;
+    if(!current||current.pos>=current.letters.length){
+      if(!pending){
+        pending=true;
+        chooseNext().then(begin).catch(()=>{}).finally(()=>{pending=false;});
+      }
+      return;
+    }
     const chunk=current.letters.slice(current.pos,current.pos+3).join('');
     current.pos+=Math.min(3,current.letters.length-current.pos);
     current.node.append(document.createTextNode(chunk));
-    displayedBits+=BigInt(enc.encode(chunk).length*8);
+    shownBits+=BigInt(encoder.encode(chunk).length*8);
     updateBits();
-    if (document.documentElement.scrollHeight-window.scrollY-window.innerHeight < 140)
+    if(document.documentElement.scrollHeight-window.scrollY-window.innerHeight<140)
       window.scrollTo(0,document.documentElement.scrollHeight);
   }
   updateBits();
-  refresh();
-  emit();
+  Promise.allSettled([prepareHistory(),updateCatalog()]).then(()=>{ready=true;emit();});
   setInterval(emit,1000);
-  setInterval(refresh,60000);
+  setInterval(updateCatalog,60000);
 })();

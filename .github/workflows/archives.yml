@@ -1,42 +1,56 @@
 name: Informationcollapse — write and publish
 on:
+  # Avoid the heavy start-of-hour queue. GitHub may still delay or drop runs.
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
+    paths:
+      - '.github/workflows/archives.yml'
+      - 'engine/**'
+      - 'assets/**'
+      - 'index.html'
+      - 'data/**'
+      - 'archive/**'
+      - 'README.md'
 permissions:
   contents: write
   pages: write
   id-token: write
 concurrency:
-  group: informationcollapse
+  group: informationcollapse-production
   cancel-in-progress: false
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Write genuine free-tier records, if scheduled or manually triggered
+      - name: Run no-network tests
+        run: |
+          python -m unittest discover -s tests -v
+          node tests/test_reader.js
+      - name: Collect genuine public records and optional free-tier AI
         if: github.event_name != 'push'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
         run: python engine/generate.py
-      - name: Refresh counters
+      - name: Rebuild complete reader index on source changes
         if: github.event_name == 'push'
         run: python engine/generate.py --rebuild
-      - name: Commit archival mutations
-        if: github.event_name != 'push'
+      - name: Verify record retention and public catalogue
+        run: python engine/verify.py
+      - name: Commit all new records and catalogue shards
         run: |
           git config user.name 'informationcollapse[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -46,14 +60,25 @@ jobs:
             git commit -m "record: $(date -u +%Y%m%dT%H%M%SZ)"
             git push origin HEAD:main
           fi
-      - name: Prepare static public files
+      - name: Publish static files
         run: |
           mkdir -p _publish
           cp index.html _publish/
           cp -r assets data archive _publish/
+          touch _publish/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _publish
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Report provenance and collection status
+        if: always()
+        run: |
+          echo '## informationcollapse archive' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f data/stats.json ]; then
+            python -c "import json; d=json.load(open('data/stats.json')); print('Unique public records:',d.get('unique_visible_record_count'),'| AI:',d.get('ai_generated_count'),'| External:',d.get('external_record_count'),'| Aozora:',d.get('aozora_record_count'))" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -f data/health.json ]; then
+            python -c "import json; d=json.load(open('data/health.json')); print('Last collection:',d.get('run_at'),'| New:',d.get('new'),'| Gemini:',d.get('gemini'),'| Wikipedia:',d.get('wikipedia'),'| Aozora:',d.get('aozora'))" >> "$GITHUB_STEP_SUMMARY"
+          fi
