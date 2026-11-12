@@ -17,7 +17,7 @@ NOW = dt.datetime.now(ZoneInfo('Asia/Tokyo'))
 DAY = NOW.strftime('%Y%m%d')
 STAMP = NOW.isoformat(timespec='seconds')
 RANDOM = random.SystemRandom()
-UA = 'informationcollapse/1.0 (fictional archive art project; public source citation; contact: repository issues)'
+UA = 'informationcollapse/1.2 (https://github.com/poraporanekochan/informationcollapse; automated free-text archive)' 
 
 
 def get_json(path, default):
@@ -125,52 +125,96 @@ def aozora_catalog():
     return cached or AOZORA_FALLBACK
 
 
-def fetch_aozora():
-    candidates=aozora_catalog()[:]
+def fetch_aozora_many(count=5, known=None):
+    """Obtain independently attributed public-domain excerpts; do not repeat archived text.
+
+    This requests only a few source files per run. Catalog failure falls back
+    to known public-domain authors while keeping the original attributions.
+    """
+    known = known or set()
+    candidates = aozora_catalog()[:]
     RANDOM.shuffle(candidates)
-    for author,title,url in candidates[:7]:
+    results=[]
+    visited=set()
+    # Fetch a small number of works, selecting different sentences from each.
+    for author,title,url in candidates[:min(len(candidates),8)]:
+        if len(results)>=count:break
+        if url in visited:continue
+        visited.add(url)
         try:
             raw,_=request(url,timeout=15)
-            page=raw.decode('shift_jis',errors='replace')
+            # Aozora XHTML typically uses Shift_JIS, some copies use UTF-8.
+            enc='utf-8' if b'charset=utf-8' in raw[:2500].lower() else 'shift_jis'
+            page=raw.decode(enc,errors='replace')
             parser=MainText();parser.feed(page)
-            text=parser.text()
-            sentences=sentence_candidates(text,minlen=14,maxlen=195)
-            if not sentences:continue
-            sentence=RANDOM.choice(sentences)
-            return {'id':'aozora-'+hashlib.sha1((url+sentence).encode()).hexdigest()[:14],
-                    'date':DAY,'created_at':STAMP,'kind':'aozora', 'speaker':author,
-                    'source':f'青空文庫：{author}『{title}』','title':title,'text':sentence,
-                    'url':url,'rights':'著作権消滅を確認した作品からの短い原文引用','provenance':'青空文庫の公開XHTMLより取得'}
-        except Exception as e: print('AOZORA fetch failed',str(e)[:130],file=sys.stderr)
-    return None
+            sentences=sentence_candidates(parser.text(),minlen=14,maxlen=195)
+            RANDOM.shuffle(sentences)
+            accepted=0
+            for sentence in sentences:
+                ident='aozora-'+hashlib.sha1((url+sentence).encode()).hexdigest()[:14]
+                if ident in known:continue
+                known.add(ident)
+                results.append({'id':ident,'date':DAY,'created_at':STAMP,'kind':'aozora','speaker':author,
+                                'source':f'青空文庫：{author}『{title}』','title':title,'text':sentence,
+                                'url':url,'rights':'著作権消滅が確認された作品の原文（青空文庫）',
+                                'provenance':'青空文庫の公開XHTMLから取得。作品の文章でありAI生成ではない。'})
+                accepted+=1
+                if len(results)>=count or accepted>=2:break
+        except Exception as e:
+            print('AOZORA fetch failed',str(e)[:140],file=sys.stderr)
+    return results
+
 
 LANGS=['en','fr','de','es','pt','it','ru','ar','fa','hi','bn','zh','ko','ja','pl','tr','uk','he','id','vi','sw','ta','ur','nl','sv','el','th']
 
-def fetch_multilingual():
-    langs=RANDOM.sample(LANGS,min(8,len(LANGS)))
-    for lang in langs:
+
+def fetch_multilingual_many(limit=40, known=None):
+    """Use small, batched random-page queries across different Wikipedia languages.
+
+    Not a uniform sample of the entire web. Each page supplies at most one
+    short excerpt and carries its page URL and original language. Respect
+    rate limits: a handful of sequential requests, never concurrent scraping.
+    """
+    known = known or set()
+    languages=RANDOM.sample(LANGS,min(8,len(LANGS)))
+    found=[]
+    for lang in languages:
+        if len(found)>=limit:break
+        lang_count=0
         try:
-            args=urllib.parse.urlencode({'action':'query','generator':'random','grnnamespace':'0','grnlimit':'1',
-                     'prop':'extracts|info','exintro':'1','explaintext':'1','inprop':'url','format':'json','formatversion':'2'})
-            url=f'https://{lang}.wikipedia.org/w/api.php?{args}'
-            raw,_=request(url,timeout=11)
+            args=urllib.parse.urlencode({
+                'action':'query','generator':'random','grnnamespace':'0',
+                'grnlimit':'8','grnfilterredir':'nonredirects',
+                'prop':'extracts|info','exintro':'1','explaintext':'1',
+                'inprop':'url','format':'json','formatversion':'2'})
+            api=f'https://{lang}.wikipedia.org/w/api.php?{args}'
+            raw,_=request(api,timeout=12)
             payload=json.loads(raw)
             pages=payload.get('query',{}).get('pages',[])
-            if not pages:continue
-            page=pages[0]
-            extract=page.get('extract','')
-            sentences=sentence_candidates(extract,minlen=20,maxlen=200)
-            if not sentences:continue
-            sentence=RANDOM.choice(sentences)
-            pageurl=page.get('fullurl') or f'https://{lang}.wikipedia.org/wiki/{urllib.parse.quote(page.get("title",""))}'
-            return {'id':'external-'+hashlib.sha1((pageurl+sentence).encode()).hexdigest()[:14],
-              'date':DAY,'created_at':STAMP,'kind':'external','language':lang,
-              'speaker':'','title':page.get('title',''),'source':f'Wikipedia ({lang})：{page.get("title","")}',
-              'text':sentence,'url':pageurl,
-              'rights':'CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/',
-              'provenance':'公開ページから引用。世界中のウェブ全体からの一様抽選ではない。'}
-        except Exception as e:print('MULTILINGUAL fetch failed',lang,str(e)[:110],file=sys.stderr)
-    return None
+            if not isinstance(pages,list):continue
+            RANDOM.shuffle(pages)
+            for page in pages:
+                if not isinstance(page,dict):continue
+                sentences=sentence_candidates(page.get('extract',''),minlen=18,maxlen=190)
+                RANDOM.shuffle(sentences)
+                title=page.get('title','')
+                pageurl=page.get('fullurl') or f'https://{lang}.wikipedia.org/wiki/{urllib.parse.quote(title.replace(" ","_"))}'
+                for sentence in sentences[:5]:
+                    ident='external-'+hashlib.sha1((pageurl+sentence).encode()).hexdigest()[:14]
+                    if ident in known:continue
+                    known.add(ident)
+                    lang_count+=1
+                    found.append({'id':ident,'date':DAY,'created_at':STAMP,'kind':'external',
+                       'language':lang,'speaker':'','title':title,
+                       'source':f'Wikipedia ({lang})：{title}','text':sentence,'url':pageurl,
+                       'rights':'CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/',
+                       'provenance':'公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。'})
+                    break
+                if len(found)>=limit or lang_count>=5:break
+        except Exception as e:
+            print('MULTILINGUAL fetch failed',lang,str(e)[:160],file=sys.stderr)
+    RANDOM.shuffle(found)
+    return found[:limit]
 
 VOICE_RULES='''舞台：都市破壊業KK（1962年創業、Sは2026年10月24日死亡）と、その業務を承継した情報破壊業KK。Aは故人である建築家Aの記録から作られたAIの対話系であり、本人ではない。透は音を収集する。久野は印刷と校正の仕事をする。川瀬初江はかつて地図と台帳の食い違いで住居の存在を否定され、不利益を受けた人間。Sの聖書はアラン『定義集』とデカルト『方法序説』。第七界のテクニウムはケヴィン・ケリーの比喩。情報の第八界はKK独自の仮説。情報は複製・変異・選択を通じて循環するが、責任の所在は常に人間の制度や行動へさかのぼる。'''
 
@@ -187,7 +231,14 @@ def generate_ai():
         return []
     roles=['Aによる自己観察', '都市破壊業KK・現地調査', 'Sの遺稿をAIが推定復元した文章', '情報破壊業KK・業務報告',
            '無署名の都市観察','透の録音台帳をもとにしたAI構成', '久野の校正メモをもとにしたAI構成',
-           'AとSの議論の不確実な再構成','情報の第八界に関する論理検証']
+           'AとSの議論の不確実な再構成','情報の第八界に関する論理検証',
+           '出勤簿に残された注記','破壊現場の騒音計測','地図修正の差戻し通知',
+           '未知の地名に関する脚注','郵便物の返送理由','1960年代の工事見積書',
+           '1970年代の行政照会','1990年代の機械の故障記録','過去の自分に出した訂正届',
+           '音声記録から失われた箇所','Aが理解できなかった人間の表情',
+           '同じ家屋に付いた二種類の住所','ある朝の無記名のメモ',
+           'A自身による文章生成の失敗報告','整合しない建築面積の再計算',
+           '行方不明の資料に付いた借出票','重要でないものの棚卸し']
     selected=RANDOM.sample(roles,4)
     canon=get_json(ROOT/'engine'/'world.json',{})
     prompt=f'''{VOICE_RULES}
@@ -251,12 +302,16 @@ def rebuild():
     external=get_records(DATA/'external.jsonl')
     # Most of the visible timeline is truly AI-written when an API key is configured.
     # This feed is a pool, not a chronological assertion.
-    records=(seed[-200:]+gen[-160:]+external[-100:])
+    # Keep a broad, bounded public pool to resist repetition on mobile.
+    # The archives themselves remain the durable complete record.
+    records=(seed[-200:]+gen[-220:]+external[-650:])
     set_json(DATA/'latest.json',{'as_of':STAMP,'records':records})
     files=list(ARCHIVE.glob('*/*.txt'))
     bits=sum(p.stat().st_size for p in files)*8
     set_json(DATA/'stats.json',{'published_bits':str(bits),'document_count':len(files),
              'record_count':len(seed)+len(gen)+len(external),'ai_generated_count':len(gen),
+             'external_record_count':sum(x.get('kind')=='external' for x in external),
+             'aozora_record_count':sum(x.get('kind')=='aozora' for x in external),
              'last_actual_ai_generation': gen[-1].get('created_at') if gen else None,
              'as_of':STAMP,
              'definition':'archive/内の公開TXTファイルをUTF-8で符号化した実バイト数×8。閲覧者の通信量を推定した数値ではない。'})
@@ -270,35 +325,53 @@ def due(state,key,minutes):
 
 def run():
     state=get_json(DATA/'state.json',{})
-    # Only one free-tier API request every 2 hours at most, regardless of the
-    # GitHub Actions schedule. A request can yield up to four real AI documents.
-    # Keep the attempt timestamp even on HTTP 429; avoid retry storms.
+    past=get_records(DATA/'generated.jsonl')+get_records(DATA/'external.jsonl')
+    known={r.get('id') for r in past}
+
+    # The Gemini free-tier request rate remains capped at once in 120 minutes.
+    # Failure never switches to a paid API and the attempt is still recorded.
     ai=[]
     if due(state,'gemini_last_attempt',120):
         if os.getenv('GEMINI_API_KEY','').strip():
             state['gemini_last_attempt']=STAMP
             ai=generate_ai()
         else:
-            print('No GEMINI_API_KEY; skipping free AI generation.',file=sys.stderr)
+            print('No GEMINI_API_KEY; free AI generation skipped.',file=sys.stderr)
+
     extras=[]
-    # Capture at most one real Aozora quote every ~5m and one multilingual excerpt every ~10m.
-    if due(state,'aozora_last',5):
-        x=fetch_aozora()
-        if x:
-            extras.append(x);state['aozora_last']=STAMP
+    # Fetch a small set of real, short, public-domain Japanese book excerpts.
+    if due(state,'aozora_last',10):
+        aozora=fetch_aozora_many(count=5,known=known)
+        if aozora:
+            extras.extend(aozora)
+            state['aozora_last']=STAMP
+
+    # Batched, multilingual random Wikipedia pages (at most 8 API calls).
+    # Do not fetch X/Instagram posts or claim unauthenticated scraping.
     if due(state,'external_last',10):
-        # Three independent public-source excerpts, preserving original scripts.
-        for _ in range(3):
-            x=fetch_multilingual()
-            if x: extras.append(x)
-        if any(r.get('kind')=='external' for r in extras): state['external_last']=STAMP
-    known={r['id'] for r in get_records(DATA/'generated.jsonl')+get_records(DATA/'external.jsonl')}
-    fresh=[r for r in ai+extras if r['id'] not in known]
-    append_log(DATA/'generated.jsonl',[r for r in fresh if r['kind']=='generated'])
-    append_log(DATA/'external.jsonl',[r for r in fresh if r['kind']!='generated'])
+        external=fetch_multilingual_many(limit=40,known=known)
+        if external:
+            extras.extend(external)
+            state['external_last']=STAMP
+
+    # Also de-duplicate all records created in one execution.
+    historical={r.get('id') for r in past}
+    fresh=[]
+    for r in ai+extras:
+        if r.get('id') not in historical:
+            fresh.append(r)
+            historical.add(r.get('id'))
+
+    append_log(DATA/'generated.jsonl',[r for r in fresh if r.get('kind')=='generated'])
+    append_log(DATA/'external.jsonl',[r for r in fresh if r.get('kind') in ('aozora','external')])
     archive_records(fresh)
     set_json(DATA/'state.json',state)
-    print('new',len(fresh),'total',rebuild())
+    total=rebuild()
+    summary={'new_ai':sum(r.get('kind')=='generated' for r in fresh),
+             'new_aozora':sum(r.get('kind')=='aozora' for r in fresh),
+             'new_wikipedia':sum(r.get('kind')=='external' for r in fresh),
+             'total':total}
+    print('GENERATION_SUMMARY',json.dumps(summary,ensure_ascii=False))
 
 if __name__=='__main__':
     if '--rebuild' in sys.argv:print(rebuild())

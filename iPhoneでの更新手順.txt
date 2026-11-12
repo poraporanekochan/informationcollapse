@@ -1,9 +1,23 @@
-informationcollapse 無料版への切替
+informationcollapse v3 — iPhoneの更新手順
 
-1. Google AI Studio https://aistudio.google.com/apikey で無料枠のGemini APIキーを作成する。
-2. GitHubの informationcollapse → Settings → Secrets and variables → Actions に GEMINI_API_KEY として登録。
-3. このZIPの中身をGitHub公開リポジトリのルートに配置して、既存ファイルを更新する（特に engine/generate.py と .github/workflows/archives.yml）。Working CopyではCommit→Push。
-4. GitHub Actions → Informationcollapse — write and publish → Run workflow を一度実行する。
-5. Actionsのログと data/stats.json の ai_generated_count で成功を確認。
+このZIPは差分更新用です。公開中のGitHubリポジトリ informationcollapse に上書きします。
 
-注意: OpenAI APIの課金は不要。有料プランに切り替えない。Gemini無料枠が上限に達したときはAI生成のみ休止。外部の文章は取得可能な範囲で継続。
+1. ZIPをiPhone「ファイル」に保存し、展開します。
+2. Working Copyで公開用のリポジトリを開き、ZIP中の以下の4ファイルを同じパスに上書きします。
+    index.html
+    assets/stream.js
+    engine/generate.py
+    README.md
+3. コミット（例: Improve randomness and prevent repeats）、Pushします。
+4. GitHubの Actions → Informationcollapse — write and publish の実行が成功するか確認します。
+5. Safariの公開ページを再読込します。新しいスクリプト読み込みのため index.html も更新対象です。
+6. Actionsを手動実行すると、ネット上の新しい引用文章の取得を試みます。Gemini無料枠は2時間に1回までなので、手動実行しても毎回AI生成はされません。
+
+成功の確認：
+- https://github.com/poraporanekochan/informationcollapse/blob/main/data/stats.json
+  external_record_count / aozora_record_count / ai_generated_count などを確認。
+- https://github.com/poraporanekochan/informationcollapse/tree/main/data
+  external.jsonl に実在の出典URLを伴う新しい原文が追加されているか確認。
+
+無料運用を優先し、有料APIへのフォールバックはありません。
+Wikimediaや青空文庫には通信制限・アクセス障害があり、取得数は実績に応じて変動します。
