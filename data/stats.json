@@ -1,9 +1,9 @@
 {
-  "published_bits": "123448",
+  "published_bits": "167600",
   "document_count": 51,
-  "record_count": 68,
-  "ai_generated_count": 0,
-  "last_actual_ai_generation": null,
-  "as_of": "2026-11-12T03:14:20+09:00",
+  "record_count": 75,
+  "ai_generated_count": 4,
+  "last_actual_ai_generation": "2026-11-12T09:07:44+09:00",
+  "as_of": "2026-11-12T09:07:44+09:00",
   "definition": "archive/内の公開TXTファイルをUTF-8で符号化した実バイト数×8。閲覧者の通信量を推定した数値ではない。"
 }
