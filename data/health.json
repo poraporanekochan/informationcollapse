@@ -1,0 +1,34 @@
+{
+  "run_at": "2026-11-12T19:57:03+09:00",
+  "trigger": "schedule",
+  "run_id": "43204806250",
+  "previous_run_at": null,
+  "gemini": {
+    "status": "error",
+    "detail": "HTTPError: HTTP Error 503: Service Unavailable",
+    "new": 0
+  },
+  "aozora": {
+    "status": "no_results",
+    "fetched": 0
+  },
+  "wikipedia": {
+    "status": "ok",
+    "fetched": 39,
+    "target_max": 40
+  },
+  "new": {
+    "generated": 0,
+    "aozora": 0,
+    "external": 39
+  },
+  "errors": [],
+  "last_success": {
+    "gemini": "2026-11-12T09:07:44+09:00",
+    "aozora": null,
+    "wikipedia": "2026-11-12T19:57:03+09:00"
+  },
+  "stale_external_collection": false,
+  "total_unique": 117,
+  "published_bits": "345560"
+}
