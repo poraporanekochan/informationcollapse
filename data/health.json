@@ -1,8 +1,8 @@
 {
-  "run_at": "2026-11-12T19:57:03+09:00",
+  "run_at": "2026-11-13T03:51:32+09:00",
   "trigger": "schedule",
-  "run_id": "43204806250",
-  "previous_run_at": null,
+  "run_id": "43284145088",
+  "previous_run_at": "2026-11-12T19:57:03+09:00",
   "gemini": {
     "status": "error",
     "detail": "HTTPError: HTTP Error 503: Service Unavailable",
@@ -14,21 +14,21 @@
   },
   "wikipedia": {
     "status": "ok",
-    "fetched": 39,
+    "fetched": 40,
     "target_max": 40
   },
   "new": {
     "generated": 0,
     "aozora": 0,
-    "external": 39
+    "external": 40
   },
   "errors": [],
   "last_success": {
     "gemini": "2026-11-12T09:07:44+09:00",
     "aozora": null,
-    "wikipedia": "2026-11-12T19:57:03+09:00"
+    "wikipedia": "2026-11-13T03:51:32+09:00"
   },
   "stale_external_collection": false,
-  "total_unique": 117,
-  "published_bits": "345560"
+  "total_unique": 157,
+  "published_bits": "514056"
 }
