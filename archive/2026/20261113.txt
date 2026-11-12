@@ -278,3 +278,303 @@ La película fue estrenada el 26 de octubre de 2018, aunque originalmente estaba
 出典: https://zh.wikipedia.org/wiki/%E5%8A%89%E6%9E%9C_(%E9%A0%86%E6%B2%BB%E9%80%B2%E5%A3%AB)
 利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
 資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [generated] [AIによる推定復元／音声記録から失われた箇所（生成AIによる創作）]
+（ここから十秒間、磁気テープの摩耗により音声の欠落があります。機械は音の波形から子音の痕跡を拾おうと試みますが、意味のある単語を復元することはできません。ただ背景の低いノイズだけが残り、それは一九七一年の川瀬初江の住居に関する台帳脱落事件で、役所の窓口職員が発した紙をめくる音と酷似していると指摘されることがありますが、AIにはその因果関係を検証する能力はありません。記録されたのは空気の振動だけであり、そこに意思があったかどうかは判断を留保します。）
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-13T08:57:19+09:00] [generated] [都市破壊業KK 物品管理担当／重要でないものの棚卸し（生成AIによる創作）]
+一九六八年五月三日調達。百室模型の制作に使用されたが現在は用途不明のバルサ材端材一箱。およびアラン『定義集』のページ外れ数枚。デカルト『方法序説』の折れ曲がった見返し。これらは業務上の直接的な損壊対象ではないため、資産台帳の「廃棄予定外」の欄に分類されたまま放置されている。久野が印刷所で用いるインクの残りカスや、透が録音機材を持ち歩く際に使用した布製バッグの擦り切れ具合についても、本棚卸しの対象外であるが、記録の隅にその存在が手書きで付記されている。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-13T08:57:19+09:00] [generated] [都市破壊業KK 総務部／出勤簿に残された注記（生成AIによる創作）]
+十月二十四日の欄には、Sの死亡事故に関する報道を受けた従業員からの連絡事項が短く書き留められている。「本日午前、警察より連絡あり。故人の私物引き取りについて遺族と調整中。なお、同日予定されていた地図情報更新業務に関する外部委託先の語り手からの進捗報告は、業務継承手続きの遅れにより翌週へ持ち越し」。この注記の筆跡は事務的なものであり、死を悼む言葉や象徴的な修飾語は一切含まれていない。インクの滲みは前日の雨によるものではなく、単にペン先の不具合によるものである。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-13T08:57:19+09:00] [generated] [都市破壊業KK 工事部／1960年代の工事見積書（生成AIによる創作）]
+Estimated cost for the structural dismantling of Block 4, Phase 2. Dated October 12, 1965. Items include labor for partition removal, disposal of obsolete blueprints, and administrative fees for notifying municipal departments. Note that discrepancies between actual site measurements and the official land ledger are explicitly excluded from the contractor's liability. The client acknowledged that any omission of a residential unit from the map due to administrative error does not halt the demolition schedule. Signed by S, with A assisting in the verification of material quantities.
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (id)：Provinsi Cajamarca]
+Provinsi Cajamarca adalah sebuah provinsi di Region Cajamarca, Peru.
+出典: https://id.wikipedia.org/wiki/Provinsi_Cajamarca
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (it)：Leila Mourad]
+È stata la diva per eccellenza della sua epoca, molto amata ancora nel ventunesimo secolo in tutto il Medioriente.
+出典: https://it.wikipedia.org/wiki/Leila_Mourad
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (uk)：Діді Чконі]
+За даними перепису населення 2014 року в селі проживає 1454 особи.
+出典: https://uk.wikipedia.org/wiki/%D0%94%D1%96%D0%B4%D1%96_%D0%A7%D0%BA%D0%BE%D0%BD%D1%96
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (uk)：М'якохвіст іржастоволий]
+М'якохві́ст іржастоволий (Phacellodomus ferrugineigula) — вид горобцеподібних птахів родини горнерових (Furnariidae).
+出典: https://uk.wikipedia.org/wiki/%D0%9C%27%D1%8F%D0%BA%D0%BE%D1%85%D0%B2%D1%96%D1%81%D1%82_%D1%96%D1%80%D0%B6%D0%B0%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%BB%D0%B8%D0%B9
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (pt)：Praça de Piragiba]
+Esse evento levou ao início de campanhas de escavações no local nos anos 90 e, até hoje, estudos e achados continuam na região.
+出典: https://pt.wikipedia.org/wiki/Pra%C3%A7a_de_Piragiba
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (it)：Mad Caddies]
+I Mad Caddies (solitamente detti i Caddies) sono un gruppo ska punk statunitense formato nel 1995 a Santa Barbara, in California.
+出典: https://it.wikipedia.org/wiki/Mad_Caddies
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (pl)：Nozdraczewo]
+Ноздрачево) – wieś (ros.
+出典: https://pl.wikipedia.org/wiki/Nozdraczewo
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (pt)：Torchiarolo]
+Torchiarolo é uma comuna italiana da região da Puglia, província de Brindisi, com cerca de 5.
+出典: https://pt.wikipedia.org/wiki/Torchiarolo
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (ja)：松平康次 (宮石松平家)]
+松平 康次（まつだいら やすつぐ）は、戦国時代から江戸時代前期にかけての武将。
+出典: https://ja.wikipedia.org/wiki/%E6%9D%BE%E5%B9%B3%E5%BA%B7%E6%AC%A1_(%E5%AE%AE%E7%9F%B3%E6%9D%BE%E5%B9%B3%E5%AE%B6)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (sv)：Sphaerostephanos hellwigensis]
+Sphaerostephanos hellwigensis ingår i släktet Sphaerostephanos och familjen Thelypteridaceae.
+出典: https://sv.wikipedia.org/wiki/Sphaerostephanos_hellwigensis
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (id)：Prix Louis-Delluc]
+Prix Louis-Delluc merupakan sebuah penghargaan sinematografi Prancis yang diberikan sejak 1937.
+出典: https://id.wikipedia.org/wiki/Prix_Louis-Delluc
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (uk)：Костриця Порція]
+Костриця Порція, костриця Порціуса (Festuca porcii) — вид однодольних квіткових рослин з родини злакових (Poaceae).
+出典: https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D1%81%D1%82%D1%80%D0%B8%D1%86%D1%8F_%D0%9F%D0%BE%D1%80%D1%86%D1%96%D1%8F
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (ja)：リンカーン駅 (イリノイ州)]
+リンカーン駅（英語：Lincoln Station）は、イリノイ州リンカーン ノース・シカゴ・ストリート101にある駅。
+出典: https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%B3%E9%A7%85_(%E3%82%A4%E3%83%AA%E3%83%8E%E3%82%A4%E5%B7%9E)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (pl)：Messier 34]
+Messier 34 (również M34 lub NGC 1039) – gromada otwarta w konstelacji Perseusza.
+出典: https://pl.wikipedia.org/wiki/Messier_34
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (pt)：Olho naupliano]
+É composto de três ou quatro ocelos, cada um contendo poucos fotorreceptores.
+出典: https://pt.wikipedia.org/wiki/Olho_naupliano
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (es)：Cyber City Oedo 808]
+Cyber City Oedo 808 (サイバーシティ OEDO 808, ''Cyber City Oedo 808''?
+出典: https://es.wikipedia.org/wiki/Cyber_City_Oedo_808
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (pt)：Antonín Charvát]
+Antonín Charvát (1899 — 19 de setembro de 1930) foi um ciclista olímpico tchecoslovaco.
+出典: https://pt.wikipedia.org/wiki/Anton%C3%ADn_Charv%C3%A1t
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (pl)：Długoprzędka bruzdowata]
+Długoprzędka bruzdowata (Dolichothele tucuruiense) – gatunek pająka z rodziny ptasznikowatych.
+出典: https://pl.wikipedia.org/wiki/D%C5%82ugoprz%C4%99dka_bruzdowata
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (it)：Chaerephon ansorgei]
+Chaerephon ansorgei (Thomas, 1913) è un Pipistrello della famiglia dei Molossidi diffuso nell'Africa subsahariana.
+出典: https://it.wikipedia.org/wiki/Chaerephon_ansorgei
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (uk)：Хачатур Абовян]
+Основоположник нової вірменської літератури і літературної мови.
+出典: https://uk.wikipedia.org/wiki/%D0%A5%D0%B0%D1%87%D0%B0%D1%82%D1%83%D1%80_%D0%90%D0%B1%D0%BE%D0%B2%D1%8F%D0%BD
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (pl)：Gandharwa]
+Gandharwa (sanskryt: गंधर्व, gandharva, pali: gandhabba) – w mitologii indyjskiej klasa nadnaturalnych istot, żywiących się pięknym zapachem drzew i kwiatów (गंध gandha – "zapach").
+出典: https://pl.wikipedia.org/wiki/Gandharwa
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (ja)：宇賀神みずき]
+宇賀神 みずき（うがじん みずき、1996年9月16日 - ）は、日本の元女子バレーボール選手である。
+出典: https://ja.wikipedia.org/wiki/%E5%AE%87%E8%B3%80%E7%A5%9E%E3%81%BF%E3%81%9A%E3%81%8D
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (pl)：Geraldine (Alabama)]
+W roku 2023 miasto zamieszkiwało 913 osób, a gęstość zaludnienia wynosiła 90,4 osoby/km².
+出典: https://pl.wikipedia.org/wiki/Geraldine_(Alabama)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (sv)：Chiquita (musikgrupp)]
+1977-1979 bytte bandet stil till det då populära discosoundet, men återgick till traditionell dansmusik under sent 1981 när Benny Bendén gick med i bandet.
+出典: https://sv.wikipedia.org/wiki/Chiquita_(musikgrupp)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (es)：Partición de la unidad]
+También son importantes en la interpolación de datos, en el procesado de señales y en la teoría de los splines.
+出典: https://es.wikipedia.org/wiki/Partici%C3%B3n_de_la_unidad
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (sv)：Lorena (fotbollsspelare)]
+Lorena da Silva Leite, med artistnamnet Lorena, född den 6 maj 1997 i Ituverava, är en brasiliansk fotbollsspelare.
+出典: https://sv.wikipedia.org/wiki/Lorena_(fotbollsspelare)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (id)：Aegyptus (provinsi Romawi)]
+Provinsi ini meliputi sebagian besar Mesir modern kecuali Semenanjung Sinai (yang akan ditaklukan oleh Trajanus).
+出典: https://id.wikipedia.org/wiki/Aegyptus_(provinsi_Romawi)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (sv)：Mario Lanza]
+Han åtnjöt stor popularitet under en kort period.
+出典: https://sv.wikipedia.org/wiki/Mario_Lanza
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (sv)：Megatrichobates striatus]
+Inga underarter finns listade i Catalogue of Life.
+出典: https://sv.wikipedia.org/wiki/Megatrichobates_striatus
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (pt)：FCW Southern Heavyweight Championship]
+Foi aposentado depois de ser unificado com o Florida Heavyweight Championship.
+出典: https://pt.wikipedia.org/wiki/FCW_Southern_Heavyweight_Championship
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (ja)：パーマストン (猫)]
+名前は19世紀中期に首相や外務大臣を務めた第3代パーマストン子爵ヘンリー・ジョン・テンプルにちなんでいる。
+出典: https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%BC%E3%83%9E%E3%82%B9%E3%83%88%E3%83%B3_(%E7%8C%AB)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (id)：Nephrotoma lateropolita]
+Nephrotoma lateropolita adalah spesies lalat yang tergolong famili Tipulidae.
+出典: https://id.wikipedia.org/wiki/Nephrotoma_lateropolita
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (es)：Deportes ecuestres en los Juegos Olímpicos de París 1900]
+Los deportes ecuestres en los Juegos Olímpicos de París 1900 se realizaron del 29 de mayo al 2 de junio de 1900.
+出典: https://es.wikipedia.org/wiki/Deportes_ecuestres_en_los_Juegos_Ol%C3%ADmpicos_de_Par%C3%ADs_1900
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (id)：Sinema Yunani]
+Lima film Yunani meraih nominasi pada Academy Award untuk Film Berbahasa Asing Terbaik.
+出典: https://id.wikipedia.org/wiki/Sinema_Yunani
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (ja)：スポティッド・ディック]
+スポティッド・ドッグ（英語: Spotted Dog）や、レイルウェイ・ケーキ（英語: Railway Cake）とも呼ばれる。
+出典: https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%9D%E3%83%86%E3%82%A3%E3%83%83%E3%83%89%E3%83%BB%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (it)：Polonodon woznikiensis]
+Polonodon woznikiensis è un terapside estinto, appartenente ai cinodonti.
+出典: https://it.wikipedia.org/wiki/Polonodon_woznikiensis
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (it)：Ministri della giustizia del Belgio]
+I ministri della giustizia del Belgio dal 1831 ad oggi sono i seguenti.
+出典: https://it.wikipedia.org/wiki/Ministri_della_giustizia_del_Belgio
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (es)：Baltasar Barcia]
+Mateo Baltasar Barcia Fernández (Pando, Uruguay; 19 de febrero de 2001) es un futbolista uruguayo.
+出典: https://es.wikipedia.org/wiki/Baltasar_Barcia
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (uk)：Словенська Бистриця]
+Slovenska Bistrica) — поселення в общині Словенська Бистриця, Подравський регіон‎, Словенія.
+出典: https://uk.wikipedia.org/wiki/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%B0_%D0%91%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%86%D1%8F
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-13T08:57:19+09:00] [external] [Wikipedia (es)：Tor-M1]
+Originalmente desarrollado por la Unión Soviética bajo la denominación GRAU 9K330, el sistema es comúnmente conocido por su designación OTAN, SA-15 Gauntlet.
+出典: https://es.wikipedia.org/wiki/Tor-M1
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
