@@ -1,8 +1,8 @@
 {
-  "run_at": "2026-11-13T15:31:28+09:00",
+  "run_at": "2026-11-13T23:53:16+09:00",
   "trigger": "schedule",
-  "run_id": "43379271213",
-  "previous_run_at": "2026-11-13T08:57:19+09:00",
+  "run_id": "43447003600",
+  "previous_run_at": "2026-11-13T15:31:28+09:00",
   "gemini": {
     "status": "error",
     "detail": "AttributeError: 'list' object has no attribute 'get'",
@@ -14,21 +14,21 @@
   },
   "wikipedia": {
     "status": "ok",
-    "fetched": 39,
+    "fetched": 40,
     "target_max": 40
   },
   "new": {
     "generated": 0,
     "aozora": 0,
-    "external": 39
+    "external": 40
   },
   "errors": [],
   "last_success": {
     "gemini": "2026-11-13T08:57:19+09:00",
     "aozora": null,
-    "wikipedia": "2026-11-13T15:31:28+09:00"
+    "wikipedia": "2026-11-13T23:53:16+09:00"
   },
   "stale_external_collection": false,
-  "total_unique": 240,
-  "published_bits": "860264"
+  "total_unique": 280,
+  "published_bits": "1036272"
 }
