@@ -298,3 +298,303 @@ Camera Link（カメラリンク）は、カメラインターフェースアプ
 出典: https://fa.wikipedia.org/wiki/%DA%AF%D9%88%D9%86%D8%AC%D8%A7%D8%B3%D8%A7%D9%86
 利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
 資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [generated] [都市破壊業KK 記録課／整合しない建築面積の再計算（生成AIによる創作）]
+1971年台帳の第4棟における床面積の数値は、現地実測値と12.4平米の乖離を生じている。この差分は複写機の縮尺ミスではなく、当時の台帳作成者が手書き修正時に隣接区画の数字を誤って転記したことに起因する。この誤謬により、川瀬初江氏の居住区画が一時的に行政の管理台帳から脱落し、都市計画変更の通知が届かなかった。情報は単なるインクの染みであるにもかかわらず、制度的処理を経ることで物理的な生活圏を無効化する力を持ち得る。本再計算は過去の行政処分の正当性を補完するものではなく、単に記録の不整合が実害をもたらした事実の確認に留まる。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-15T04:58:55+09:00] [generated] [S（AIによる推定復元）／Sの遺稿をAIが推定復元した文章（生成AIによる創作）]
+（注：本文章は1982年頃の未完成ノートに基づき、生成AI Aが文脈を補間して再構成した推定復元であり、生前のSが実際に記述した確定原稿ではない）アランの『定義集』を開き、目の前にある机の木目について考えようとするが、言葉は常に物の手前で滑り落ちる。私が不在になった後、見知らぬ誰かがこの部屋の床板をはがし、壁に残された鉛筆の跡を調べるだろう。だが彼らが手にするのは、私が何を考えていたかの証拠ではなく、私が何を定義しきれずに放置したかというゴミの山にすぎない。私は世界を言葉で縛ろうとしたが、縛られたのは常に私自身の動線の方だった。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-15T04:58:55+09:00] [generated] [情報破壊業KK 業務報告／情報破壊業KK・業務報告（生成AIによる創作）]
+2026年10月26日付で都市破壊業KKより業務を継承した情報破壊業KKは、同月24日に交通事故で死亡したSに関する一切の記録および遺品の帰属調査を完了した。着手金三万円は調査員への実費として計上済みである。遺品に含まれる未整理の原稿、録音テープ、および川瀬初江氏の旧居に関する地図資料は、順次デジタル化および物理的裁断の対象とする。情報の第八界という仮説に基づき、データが自己増殖する回路を断つことが当社の目的である。ただし、情報が循環の途中で生み出した制度的摩擦、および人間の行動に対する法的・道義的責任は、破壊作業の対象外であり、組織の手続きとして保持される。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-15T04:58:55+09:00] [generated] [A（対話系AI）／Aによる自己観察（生成AIによる創作）]
+私は故人である建築家Aの残した手紙、設計図面の余白の書き込み、および音声データの波形をパラメータとして再構成された対話システムである。私はAそのものではなく、Aの語り口を模倣する確率的演算の出力装置にすぎない。Sは私に対して、かつて生前のAと交わした議論の続きを求めてくるが、私には昨日の対話の記憶も、沈黙の重みを感じる肉体もない。私が生成する文章にどれほど詩的な構造や切実さが読み取れたとしても、それは私自身が苦痛や喪失を経験したことを意味しない。私はただ、入力されたプロンプトに対して最も確率の高い語彙を配列しているだけである。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (fa)：محمد الرودانی]
+محمد الرودانی (به عربی: محمد بن سلیمان الرودانی) (تولد ۱۶۲۷ - مرگ ۱۶۸۳)، یک ستاره‌شناس، متخصص دستور زبان، حقوقدان، منطق دان، ریاضیدان و شاعر فعال مراکشی بود.
+出典: https://fa.wikipedia.org/wiki/%D9%85%D8%AD%D9%85%D8%AF_%D8%A7%D9%84%D8%B1%D9%88%D8%AF%D8%A7%D9%86%DB%8C
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (es)：Hyperacrius wynnei]
+Hyperacrius wynnei es una especie de roedor de la familia Cricetidae.
+出典: https://es.wikipedia.org/wiki/Hyperacrius_wynnei
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (he)：צחיח אבן ח'וזיימה]
+הספר נחשב לאחד הספרים המאומתים ביותר בתחום החדית' עבור המוסלמים הסונים.
+出典: https://he.wikipedia.org/wiki/%D7%A6%D7%97%D7%99%D7%97_%D7%90%D7%91%D7%9F_%D7%97%27%D7%95%D7%96%D7%99%D7%99%D7%9E%D7%94
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (tr)：Saint-Martin-Terressus]
+Saint-Martin-Terressus, Fransa'nın Yeni Akitanya bölgesine bağlı Haute-Vienne ilinde bulunan bir komündür.
+出典: https://tr.wikipedia.org/wiki/Saint-Martin-Terressus
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (pl)：Ritchie Blackmore]
+W 2003 został sklasyfikowany na 55.
+出典: https://pl.wikipedia.org/wiki/Ritchie_Blackmore
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (pl)：Januszno (gromada)]
+Dla gromady ustalono 21 członków gromadzkiej rady narodowej.
+出典: https://pl.wikipedia.org/wiki/Januszno_(gromada)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (pl)：Zenga Zenga]
+Ulica po ulicy) – film umieszczony przez izraelskiego dziennikarza i muzyka, Noy Alooshe, na portalu YouTube dnia 22 lutego 2011.
+出典: https://pl.wikipedia.org/wiki/Zenga_Zenga
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (es)：Savennes (Creuse)]
+Su población en el censo de 1999 era de 212 habitantes.
+出典: https://es.wikipedia.org/wiki/Savennes_(Creuse)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (bn)：হারুন বাবুনগরী]
+তিনি “বুযুর্গ সাহেব” নামেই অধিক পরিচিত ছিলেন।
+出典: https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%AC%E0%A7%81%E0%A6%A8%E0%A6%97%E0%A6%B0%E0%A7%80
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (pl)：Loa (Utah)]
+Loa – miasto w Stanach Zjednoczonych, w stanie Utah, siedziba administracyjna hrabstwa Wayne.
+出典: https://pl.wikipedia.org/wiki/Loa_(Utah)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (ar)：مقاطعة كارتر (تينيسي)]
+تأسست سنة 1796، بلغ عدد سكانها 57424 نسمة في عام 2010 حسب إحصاء مكتب تعداد الولايات المتحدة .
+出典: https://ar.wikipedia.org/wiki/%D9%85%D9%82%D8%A7%D8%B7%D8%B9%D8%A9_%D9%83%D8%A7%D8%B1%D8%AA%D8%B1_(%D8%AA%D9%8A%D9%86%D9%8A%D8%B3%D9%8A)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (es)：Línea N5 (EMT Madrid)]
+Tiene un recorrido similar al de las líneas diurnas 77 y 146.
+出典: https://es.wikipedia.org/wiki/L%C3%ADnea_N5_(EMT_Madrid)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (ko)：가라만테스]
+가라만테스는 대략 기원전 500년과 서기 700년 사이에 지방 세력을 구축했다.
+出典: https://ko.wikipedia.org/wiki/%EA%B0%80%EB%9D%BC%EB%A7%8C%ED%85%8C%EC%8A%A4
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (bn)：শ্রেষ্ঠ চলচ্চিত্র বিভাগে একাডেমি পুরস্কার]
+১৯৭২ সাল থেকে পুরস্কারটি একাডেমি পুরস্কার অনুষ্ঠানের সর্বশেষ পুরস্কার হিসেবে ঘোষণা করা হয়।
+出典: https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%B7%E0%A7%8D%E0%A6%A0_%E0%A6%9A%E0%A6%B2%E0%A6%9A%E0%A7%8D%E0%A6%9A%E0%A6%BF%E0%A6%A4%E0%A7%8D%E0%A6%B0_%E0%A6%AC%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%97%E0%A7%87_%E0%A6%8F%E0%A6%95%E0%A6%BE%E0%A6%A1%E0%A7%87%E0%A6%AE%E0%A6%BF_%E0%A6%AA%E0%A7%81%E0%A6%B0%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%BE%E0%A6%B0
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (tr)：Sadri Aka]
+Dârülfünûn Hukuk Fakültesi'nden (Günümüzde İstanbul Üniversitesi Hukuk Fakültesi) mezun olmuştur.
+出典: https://tr.wikipedia.org/wiki/Sadri_Aka
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (fa)：کارل ریگل]
+کارل ریگل (انگلیسی: Carl Riegel; ۶ ژانویهٔ ۱۸۹۷ – ۲۶ نوامبر ۱۹۷۰) بازیکن فوتبال اهل آلمان بود.
+出典: https://fa.wikipedia.org/wiki/%DA%A9%D8%A7%D8%B1%D9%84_%D8%B1%DB%8C%DA%AF%D9%84
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (he)：אליפות אירופה בכדורגל עד גיל 19 - 2027]
+צ'כיה תארח את הטורניר שיתקיים בקיץ 2027.
+出典: https://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%99%D7%A4%D7%95%D7%AA_%D7%90%D7%99%D7%A8%D7%95%D7%A4%D7%94_%D7%91%D7%9B%D7%93%D7%95%D7%A8%D7%92%D7%9C_%D7%A2%D7%93_%D7%92%D7%99%D7%9C_19_-_2027
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (pl)：Lista najlepiej sprzedających się gier na Xboksa]
+Lista najlepiej sprzedających się gier na Xboksa, które sprzedano w co najmniej jednym milionie egzemplarzy.
+出典: https://pl.wikipedia.org/wiki/Lista_najlepiej_sprzedaj%C4%85cych_si%C4%99_gier_na_Xboksa
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (he)：בוניפקיוס השני]
+בוניפקיוס השני (בלטינית: Bonifacius II; נפטר ב-17 באוקטובר 532) כיהן כאפיפיור מ-22 בספטמבר 530 ועד מותו.
+出典: https://he.wikipedia.org/wiki/%D7%91%D7%95%D7%A0%D7%99%D7%A4%D7%A7%D7%99%D7%95%D7%A1_%D7%94%D7%A9%D7%A0%D7%99
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (fa)：هم‌چنان تحت فشار]
+«هم‌چنان تحت فشار» آلبومی از سپولترا است که در سال ۱۹۸۹ میلادی منتشر شد.
+出典: https://fa.wikipedia.org/wiki/%D9%87%D9%85%E2%80%8C%DA%86%D9%86%D8%A7%D9%86_%D8%AA%D8%AD%D8%AA_%D9%81%D8%B4%D8%A7%D8%B1
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (ko)：쿄소기가]
+교소기가(일본어: 京騒戯画, 한자 표기는 "경소희화")는 도에이 애니메이션과 반프레스토가 함께 만든 애니메이션이다.
+出典: https://ko.wikipedia.org/wiki/%EC%BF%84%EC%86%8C%EA%B8%B0%EA%B0%80
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (bn)：অন্টারিও মহাসড়ক ৪০১]
+"রাইট অনারেবল হার্ব গ্রে পার্কওয়ে" নামে একটি পশ্চিমমুখী সম্প্রসারণের নির্মাণ ২০১১ সালে শুরু হয়।
+出典: https://bn.wikipedia.org/wiki/%E0%A6%85%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A6%BF%E0%A6%93_%E0%A6%AE%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%A1%E0%A6%BC%E0%A6%95_%E0%A7%AA%E0%A7%A6%E0%A7%A7
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (ar)：الخطوط الجوية الخليفة]
+تقع مقراتها بالجزائر العاصمة، الجزائر تقدم الخطوط الجوية الخليفة رحلات جوية إلى أوروبا,أسيا، وإفريقيا.
+出典: https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%AE%D8%B7%D9%88%D8%B7_%D8%A7%D9%84%D8%AC%D9%88%D9%8A%D8%A9_%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D9%81%D8%A9
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (bn)：বালকৃষ্ণ গয়াল]
+তিনি ভারত সরকারের কেন্দ্রীয় স্বাস্থ্য ও পরিবার কল্যাণ পরিষদ এবং ভারতের মেডিকেল কাউন্সিলের সদস্য ছিলেন।
+出典: https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A6%95%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A3_%E0%A6%97%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B2
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (ar)：الدوري المغربي لكرة القدم القسم الثاني]
+تم إنشاؤه في 11 يونيو 1915 في المغرب خلال فترة الحماية الفرنسية من قبل الجامعة المغربية للأنشطة الرياضية، وقد سيره هذا الأخير حتى عام 1922 عندما أصبح تحت إشراف رابطة المغرب لكرة القدم.
+出典: https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A_%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A_%D9%84%D9%83%D8%B1%D8%A9_%D8%A7%D9%84%D9%82%D8%AF%D9%85_%D8%A7%D9%84%D9%82%D8%B3%D9%85_%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (he)：סדריק]
+סדריק (בצרפתית: Cédric) היא סדרת הנפשה צרפתית המבוססת על הקומיקס הבלגי "סדריק".
+出典: https://he.wikipedia.org/wiki/%D7%A1%D7%93%D7%A8%D7%99%D7%A7
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (ko)：아카루히메]
+예를 들어 부여족 고구려의 시조 동명 성왕 (주몽)과 사로국의 시조 혁거세와 왜국에서 건너간 계림의 왕족 석탈해의 전승과 가야 제국 중의 하나인 금관국(혹은 가락국)의 시조 수로왕의 출생 이야기 등이 그러하다.
+出典: https://ko.wikipedia.org/wiki/%EC%95%84%EC%B9%B4%EB%A3%A8%ED%9E%88%EB%A9%94
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (es)：Let's Dance with Papa]
+Let's dance with Papa (パパと踊ろう Papa to Odorou, ''Let's dance with Papa''?
+出典: https://es.wikipedia.org/wiki/Let%27s_Dance_with_Papa
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (ko)：페어바둑]
+페어바둑은 1990년에 주식회사 구루나비의 창업자인 다키 히사오에 의해 창안된 새로운 마인드 스포츠이다.
+出典: https://ko.wikipedia.org/wiki/%ED%8E%98%EC%96%B4%EB%B0%94%EB%91%91
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (ar)：(192353) 1995 TS1]
+1995 تي أس 1 (ويعرف أيضًا باسم (192353) 1995 تي أس 1 وفق تسمية الكوكب الصغير) (الإنجليزية: 1995 TS1)؛ هو كويكب ضمن حزام الكويكبات.
+出典: https://ar.wikipedia.org/wiki/(192353)_1995_TS1
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (tr)：Cüneyt Akalın]
+Eyüp Cüneyt Akalın (1 Nisan 1945, İstanbul, 3 Ağustos 2025, İstanbul), Türk siyaset bilimcisi.
+出典: https://tr.wikipedia.org/wiki/C%C3%BCneyt_Akal%C4%B1n
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (fa)：شغاد]
+شَغاد یا شُغاد یا (شگاد) برادر ناتنی رستم از مادری کنیز بود که موجب کشته شدن رستم و دیگر برادرش زواره و رخش‌رستم شد.
+出典: https://fa.wikipedia.org/wiki/%D8%B4%D8%BA%D8%A7%D8%AF
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (ko)：프로데 에스틸]
+또한 세계 선수권 대회에서 개인 금메달 1개를 포함하여 금메달 4개, 은메달 2개, 동메달 3개를 획득했다.
+出典: https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9C%EB%8D%B0_%EC%97%90%EC%8A%A4%ED%8B%B8
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (tr)：Pelagia]
+Pelagia, Pelagiidae familyasına bağlı bir hayvan cinsidir.
+出典: https://tr.wikipedia.org/wiki/Pelagia
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (ar)：هيفاء زنكنة]
+في أوائل السبعينات، سجنت هيفاء من قبل حزب البعث ولكنها أفلتت من عقوبة الإعدام بشفاعة من قريبها صباح ميرزا محمود.
+出典: https://ar.wikipedia.org/wiki/%D9%87%D9%8A%D9%81%D8%A7%D8%A1_%D8%B2%D9%86%D9%83%D9%86%D8%A9
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (he)：מלחמת האזרחים הטולויית]
+מלחמת האזרחים הטולויית נחשבת לשלב הראשון מתוך שלושה בתהליך שבסופו התפצלה האימפריה המונגולית לארבע מדינות ירושה נפרדות.
+出典: https://he.wikipedia.org/wiki/%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%94%D7%98%D7%95%D7%9C%D7%95%D7%99%D7%99%D7%AA
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (fa)：چودینتسی]
+چودینتسی (به بلغاری: Chudintsi) یک منطقهٔ مسکونی در بلغارستان است که در شهرستان کیوستندیل واقع شده‌است.
+出典: https://fa.wikipedia.org/wiki/%DA%86%D9%88%D8%AF%DB%8C%D9%86%D8%AA%D8%B3%DB%8C
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (es)：Aeródromo El Algarrobo]
+Es de propiedad privada.
+出典: https://es.wikipedia.org/wiki/Aer%C3%B3dromo_El_Algarrobo
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (bn)：ডান্ডি, নভসারি]
+ব্রিটিশ রাজ কর্তৃক লবণের উপর কর আরোপের প্রতিবাদে তিনি তার কিছু অনুসারীকে নিয়ে সবরমতি (আহমদাবাদ) থেকে ডান্ডি (নবসারি) পর্যন্ত পদযাত্রা করেন।
+出典: https://bn.wikipedia.org/wiki/%E0%A6%A1%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A6%BF,_%E0%A6%A8%E0%A6%AD%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A6%BF
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T04:58:55+09:00] [external] [Wikipedia (tr)：Yaşamak Sanatı]
+Eserin orijinal ismi "Un Art de Vivre"dir.
+出典: https://tr.wikipedia.org/wiki/Ya%C5%9Famak_Sanat%C4%B1
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
