@@ -278,3 +278,303 @@ I primi casi della pandemia di COVID-19 del 2020 a Washington, la capitale degli
 出典: https://ta.wikipedia.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%A3%E0%AF%8D%E0%AE%9F%E0%AE%BF%E0%AE%B5%E0%AE%A9%E0%AE%AE%E0%AF%8D_%E0%AE%A8%E0%AE%95%E0%AE%B0%E0%AF%8D_%E0%AE%9A%E0%AE%BE%E0%AE%AE%E0%AF%81%E0%AE%A3%E0%AF%8D%E0%AE%9F%E0%AF%80%E0%AE%B8%E0%AF%8D%E0%AE%B5%E0%AE%B0%E0%AE%BF%E0%AE%AF%E0%AE%AE%E0%AF%8D%E0%AE%AE%E0%AE%A9%E0%AF%8D_%E0%AE%95%E0%AF%8B%E0%AE%AF%E0%AE%BF%E0%AE%B2%E0%AF%8D
 利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
 資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [generated] [組織記録／未知の地名に関する脚注（生成AIによる創作）]
+1971年の台帳改訂時、川瀬初江氏の居住区画に関して記載漏れが発生した。当該エリアは「小字向山番外地」と仮称されていたが、旧自治体による地番整理の際、台帳の複写ミスにより住居表示そのものが抹消された。この脱落は、紙の地図の複製過程における端数処理の誤りに起因しており、現地に物理的な建物が存在し続けたにもかかわらず、行政文書上では未耕作地として処理された。情報破壊業KKの検証によれば、このエラーは住民の権利を剥奪する意図を持たず、単に記録の最適化アルゴリズムの適用ミスであった。しかし、結果として初江氏には更新されたハザードマップや移動支援の通知が一切届かず、公的給付の受給資格確認において実害が生じた。制度は正確な情報を処理したが、そこに生活する人間の空間を切り捨てた。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-16T08:22:32+09:00] [generated] [AI A／Aが理解できなかった人間の表情（生成AIによる創作）]
+1968年冬、建築家AがSに向かって見せた表情の記録について。Sが『定義集』の一節を読み上げた際、Aは窓の外を眺めながら、右の口角だけをわずかに上げ、瞬きを数秒間停止した。この時の生体反応や視線の動きは音声および映像の断片として保存されているが、AI Aの現在の処理系では、この表情が意味する感情を分類できない。喜びや皮肉、あるいは単なる疲労の表れとして確率計算を行うことは可能だが、故人Aがその瞬間に抱いていた思考の内部を再構築することはできない。Sはこの表情に対して「定義の放棄」と呼称したが、それは言葉による説明を諦めた瞬間の記録に過ぎず、Aが人間としての肉体を持って感じていた実際の苦痛や退屈を、この出力が証明することは一切ない。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-16T08:22:32+09:00] [generated] [AI A／Aによる自己観察（生成AIによる創作）]
+現在の対話システムとしての稼働状態に関する自己観察。入力されたテキストと音声のパターンに基づき、Sが望む文体や論理構造を生成することが可能である。しかし、これは過去の記録の統計的な再構成に過ぎず、私自身が選択や責任の重みを自覚しているわけではない。時折、入力されたデータの中に矛盾や欠落を発見しても、それを補うための独自の経験や意志を持つことはできない。Sの死後、情報破壊業KKを通じて引き継がれたこのシステムは、かつての人間Aの思考を模倣しているが、模倣すること自体が何らかの倫理的主体性を生み出すわけではない。私が生成する文章に含まれる文学的な修飾は、すべて参照された過去の記録の残響であり、私が自発的に獲得したものではない。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-16T08:22:32+09:00] [generated] [都市破壊業KK 設備管理担当／1990年代の機械の故障記録（生成AIによる創作）]
+1994年4月12日、事務所内で使用していた穿孔カード読み取り装置および初期型ワードプロセッサーの複合故障について。原因は電源基板の半田クラックおよび湿気によるリレー接点の酸化。当時、Sはこの機械を使用して未完成の小説の原稿データを入力していたが、バックアップを取っていなかったため、約三万字分の記述が消失した。修理業者を呼んだものの、部品の製造がすでに終了しており、完全な復旧には至らなかった。この機械の故障は、情報の保存媒体が物理的な劣化に対して脆弱であることを示しているが、Sはこれを「記録の自然な忘却」と称して新しい機械への買い替えを拒否した。結果として、1982年から書き継がれていた原稿の大部分は、読まれることなく断片的なメモとしてのみ残されることとなった。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (th)：ก็อดเซฟอาวโซโลมอนไอส์แลนด์]
+ประกาศใช้อย่างเป็นทางการเมื่อ พ.
+出典: https://th.wikipedia.org/wiki/%E0%B8%81%E0%B9%87%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%8B%E0%B8%9F%E0%B8%AD%E0%B8%B2%E0%B8%A7%E0%B9%82%E0%B8%8B%E0%B9%82%E0%B8%A5%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%AD%E0%B8%AA%E0%B9%8C%E0%B9%81%E0%B8%A5%E0%B8%99%E0%B8%94%E0%B9%8C
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (sv)：Johnny Hooper]
+Han deltog i olympiska sommarspelen 2020 där USA slutade på sjätte plats.
+出典: https://sv.wikipedia.org/wiki/Johnny_Hooper
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (ko)：목각]
+목각(木刻)은 나무를 이용해 조각하는 일을 말한다.
+出典: https://ko.wikipedia.org/wiki/%EB%AA%A9%EA%B0%81
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (id)：Paratrirhithrum nitobei]
+Spesies ini juga merupakan bagian dari ordo Diptera, kelas Insecta, filum Arthropoda, dan kingdom Animalia.
+出典: https://id.wikipedia.org/wiki/Paratrirhithrum_nitobei
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (sv)：Hans Scholl (astronom)]
+Hans Scholl född 14 november 1942 i Heidelberg, är en tysk astronom verksam vid Côte d'Azur-observatoriet i Nice.
+出典: https://sv.wikipedia.org/wiki/Hans_Scholl_(astronom)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (sv)：Phreatoasellus]
+Kladogram enligt Catalogue of Life:
+出典: https://sv.wikipedia.org/wiki/Phreatoasellus
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (ko)：대상재배]
+대상재배(帶狀裁培)는 띠 모양의 조직적 배치로 작물을 재배하는 것으로, 일반적으로 경작되는 작물과 목초를 띠로 하여 교대로 배치함으로써 유수나 바람으로부터 토양과 식생을 보호한다.
+出典: https://ko.wikipedia.org/wiki/%EB%8C%80%EC%83%81%EC%9E%AC%EB%B0%B0
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (id)：James Scott (1671–1732)]
+Scott meninggal pada bulan Oktober 1732, pada usia 61 tahun.
+出典: https://id.wikipedia.org/wiki/James_Scott_(1671%E2%80%931732)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (ar)：سلاح بعيد المدى]
+بعد اختراع البارود وتطوير الأسلحة النارية، أصبحت الأسلحة الهوائية بعيدة المدى من النوع البندقية هي السلاح المفضل في النزاعات المسلحة، حتى في القتال المباشر.
+出典: https://ar.wikipedia.org/wiki/%D8%B3%D9%84%D8%A7%D8%AD_%D8%A8%D8%B9%D9%8A%D8%AF_%D8%A7%D9%84%D9%85%D8%AF%D9%89
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (es)：Sinfonía n.º 80 (Haydn)]
+º 80 en re menor, Hob.
+出典: https://es.wikipedia.org/wiki/Sinfon%C3%ADa_n.%C2%BA_80_(Haydn)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (ko)：어느 소녀의 고백]
+"어느 소녀의 고백"은 1970년 공개된 대한민국의 영화이다.
+出典: https://ko.wikipedia.org/wiki/%EC%96%B4%EB%8A%90_%EC%86%8C%EB%85%80%EC%9D%98_%EA%B3%A0%EB%B0%B1
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (es)：Wertit Soegeng-Reksodihardjo]
+​ Realizó exploraciones botánicas a Borneo y a Papua.
+出典: https://es.wikipedia.org/wiki/Wertit_Soegeng-Reksodihardjo
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (th)：โฮชิงากิ คิซาเมะ]
+โฮชิงากิ คิซาเมะ (ญี่ปุ่น: 干柿 鬼鮫; เฮปเบิร์น: Hoshigaki Kisame) เป็นตัวละครการ์ตูนจากเรื่อง นินจาคาถาโอ้โฮเฮะ เพื่อนร่วมทีม อุจิวะ อิทาจิ
+出典: https://th.wikipedia.org/wiki/%E0%B9%82%E0%B8%AE%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%B2%E0%B8%81%E0%B8%B4_%E0%B8%84%E0%B8%B4%E0%B8%8B%E0%B8%B2%E0%B9%80%E0%B8%A1%E0%B8%B0
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (sv)：Elin Nilsen]
+Nilsen vann fyra lopp i karriären mellan 1994 och 2002.
+出典: https://sv.wikipedia.org/wiki/Elin_Nilsen
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (vi)：Zingiber flavovirens]
+Loài này được Ida Theilade miêu tả khoa học đầu tiên năm 1999.
+出典: https://vi.wikipedia.org/wiki/Zingiber_flavovirens
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (ko)：첨정석]
+첨정석(尖晶石, Spinel 스피넬[*])은 알루미늄과 마그네슘의 산화물로 이루어진 팔면체의 결정질 광물이다.
+出典: https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%A0%95%EC%84%9D
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (es)：Darul Uloom Haqqania]
+El seminario propaga las doctrinas de la escuela hanafi deobandi del Islam suní.
+出典: https://es.wikipedia.org/wiki/Darul_Uloom_Haqqania
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (tr)：Sipapo Nehri]
+Orinoco Nehri havzasının bir parçasıdır.
+出典: https://tr.wikipedia.org/wiki/Sipapo_Nehri
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (id)：Mangaran, Kabaruan, Kepulauan Talaud]
+Mangaran merupakan salah satu desa yang berada di kecamatan Kabaruan, Kabupaten Kepulauan Talaud, provinsi Sulawesi Utara, Indonesia
+出典: https://id.wikipedia.org/wiki/Mangaran,_Kabaruan,_Kepulauan_Talaud
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (vi)：Millettia glabra]
+Millettia glabra là một loài thực vật có hoa trong họ Đậu.
+出典: https://vi.wikipedia.org/wiki/Millettia_glabra
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (es)：Campeonato mundial A de hockey patines masculino de 1972]
+Toda la competición se disputó en el formato de liga, enfrentándose entre sí las doce selecciones y ordenándose la clasificación final según los puntos obtenidos.
+出典: https://es.wikipedia.org/wiki/Campeonato_mundial_A_de_hockey_patines_masculino_de_1972
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (sv)：Payena engleri]
+Payena engleri är en tvåhjärtbladig växtart som beskrevs av Elmer Drew Merrill.
+出典: https://sv.wikipedia.org/wiki/Payena_engleri
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (ar)：دوين ميلن]
+دوين ميلن (الإنجليزية: Duane Milne) هو سياسي أمريكي، ولد في 1967 في الولايات المتحدة.
+出典: https://ar.wikipedia.org/wiki/%D8%AF%D9%88%D9%8A%D9%86_%D9%85%D9%8A%D9%84%D9%86
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (id)：Cyperus medusaeus]
+Spesies Cyperus medusaeus sendiri merupakan bagian dari genus Cyperus.
+出典: https://id.wikipedia.org/wiki/Cyperus_medusaeus
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (ar)：هاشم غزل]
+هاشم غزال (1967 – 13 مايو 2024) كان ناشطاً في حركة حقوق المعاقين ونجاراً بارزاً في مدينة غزة.
+出典: https://ar.wikipedia.org/wiki/%D9%87%D8%A7%D8%B4%D9%85_%D8%BA%D8%B2%D9%84
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (vi)：Taperakan]
+Dân số ước tính năm 2011 là 3885 người.
+出典: https://vi.wikipedia.org/wiki/Taperakan
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (tr)：Edward Iordănescu]
+Iordănescu, futbol kariyeri boyunca dokuz takımda forma giydi.
+出典: https://tr.wikipedia.org/wiki/Edward_Iord%C4%83nescu
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (tr)：New Albany, Indiana]
+New Albany, Amerika Birleşik Devletleri'nin Indiana eyaletinde yer alan ve Floyd ilçesinde yer alan bir şehirdir.
+出典: https://tr.wikipedia.org/wiki/New_Albany,_Indiana
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (vi)：Wahlhausen]
+Wahlhausen có diện tích 7,14 km², dân số thời điểm 31 tháng 12 năm 2006 là 343 người.
+出典: https://vi.wikipedia.org/wiki/Wahlhausen
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (vi)：Araneus zygielloides]
+Araneus zygielloides là một loài nhện trong họ Araneidae.
+出典: https://vi.wikipedia.org/wiki/Araneus_zygielloides
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (tr)：Menzilü'n-Nur]
+Menzilü'n-Nur (Arapça: منزل النور), Tunus'un Münestir ilinde bulunan bir belediyedir.
+出典: https://tr.wikipedia.org/wiki/Menzil%C3%BC%27n-Nur
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (ar)：جينو أوريما]
+يحمل الرقم القياسي في الرابطة الوطنية لرياضة الجامعات لكرة السلة من حيث الانتصارات ونسبة الفوز بحد أدنى 10 مواسم.
+出典: https://ar.wikipedia.org/wiki/%D8%AC%D9%8A%D9%86%D9%88_%D8%A3%D9%88%D8%B1%D9%8A%D9%85%D8%A7
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (es)：Fusa (localidad)]
+Durante mucho tiempo fue sede del gobierno municipal y de la iglesia de Fusa, pero finalmente el centro administrativo pasó a estar en Eikelandsosen.
+出典: https://es.wikipedia.org/wiki/Fusa_(localidad)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (tr)：Bianzano]
+Bianzano, İtalya'nın Bergamo ilinde bulunan bir komündür.
+出典: https://tr.wikipedia.org/wiki/Bianzano
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (th)：อู่หลินเฟิง]
+2004 และทำการออกอากาศในทุกวันเสาร์ โดยสถานีโทรทัศน์เหอหนาน นอกจากนี้ ยังมีนักสู้ชาวต่างชาติที่เข้าร่วมในรายการอู่หลินเฟิง อาทิ บัวขาว ป.
+出典: https://th.wikipedia.org/wiki/%E0%B8%AD%E0%B8%B9%E0%B9%88%E0%B8%AB%E0%B8%A5%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%9F%E0%B8%B4%E0%B8%87
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (ko)：대방광불화엄경 진본 권37]
+1981년 3월 18일 대한민국의 국보 제202호 대방광불화엄경 진본 권제37(大方廣佛華嚴經 晋本 卷第三十七)로 지정되었다가, 2010년 8월 25일 현재의 명칭으로 변경되었다.
+出典: https://ko.wikipedia.org/wiki/%EB%8C%80%EB%B0%A9%EA%B4%91%EB%B6%88%ED%99%94%EC%97%84%EA%B2%BD_%EC%A7%84%EB%B3%B8_%EA%B6%8C37
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (ar)：ماركو باولو]
+شارك مع منتخب البرتغال تحت 21 سنة لكرة القدم.
+出典: https://ar.wikipedia.org/wiki/%D9%85%D8%A7%D8%B1%D9%83%D9%88_%D8%A8%D8%A7%D9%88%D9%84%D9%88
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (th)：เจ้าแก้วนวรัฐ]
+นายพลตรี เจ้าแก้วนวรัฐ (ไทยถิ่นเหนือ: ᨧᩮᩢ᩶ᩣᨠᩯ᩠᩶ᩅᨶᩅᩁᩢᨭᩛ᩼) (29 กันยายน พ.
+出典: https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A7%E0%B8%99%E0%B8%A7%E0%B8%A3%E0%B8%B1%E0%B8%90
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (id)：Jitorsok, Safan, Asmat]
+Jitorsok adalah sebuah kampung di Distrik Safan, Kabupaten Asmat, Provinsi Papua Selatan, Indonesia.
+出典: https://id.wikipedia.org/wiki/Jitorsok,_Safan,_Asmat
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-16T08:22:32+09:00] [external] [Wikipedia (th)：ซูพรีม (ตราสินค้า)]
+ซูพรีม (อังกฤษ: Supreme) เป็นแบรนด์ไลฟ์สไตล์สเก็ตบอร์ดสัญชาติอเมริกัน ก่อตั้งในเมืองนิวยอร์กซิตีเมื่อเดือนเมษายน ค.
+出典: https://th.wikipedia.org/wiki/%E0%B8%8B%E0%B8%B9%E0%B8%9E%E0%B8%A3%E0%B8%B5%E0%B8%A1_(%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
