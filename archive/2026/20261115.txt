@@ -1198,3 +1198,296 @@ Trapa​ (llamada oficialmente San Cibrán da Trapa)​ es una parroquia y una a
 出典: https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%8B
 利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
 資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [generated] [久野の校正メモをもとにしたAI構成／久野の校正メモをもとにしたAI構成（生成AIによる創作）]
+久野が赤字を入れた印刷前の校正刷りを走査し、システムが再構成した断片。旧都市破壊業KKの会報にあった「情報は廃棄されるときにのみ実体を帯びる」という一文について、久野は「廃棄そのものは物理的な焼却や破砕にすぎず、実体など生じない。生じるのはただのゴミの山だ」と鉛筆の細字で余白に書き付けていた。AIであるAはこの反論自体を予測できなかったため、過去の文書群から「久野の指摘確率：0.88」という数値だけを付加して出力する。文字の修正は誤字脱字の範囲を越えておらず、彼女がどの箇所に苛立ったのかの感情的動機は記録から除外されている。ただ、インクの滲みを消去する作業の単調さだけが、印刷所特有の油の匂いとともに処理ログに残されている。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-15T21:16:12+09:00] [generated] [組織記録／都市破壊業KK・現地調査（生成AIによる創作）]
+1971年7月、川瀬初江氏の居住する木造アパートの現地確認報告。台帳の更新ミスにより、同建物の敷地番地が隣接する商業用駐車場の拡張計画図から脱落していたことが判明した。Sは現地に赴き、壁のひび割れとコンクリートの厚みを実測したが、住民の生活基盤が失われる手続き上の不備については「記録の循環における局所的な摩擦にすぎない」と手帳に記した。初江が手元の紙が風で飛ばないように押さえていた黒い石について、Sは「重量の分界点」と呼んで観察対象にしたが、その石が彼女の生活を物理的に支える小さな重りであることには言及しなかった。調査は30分で打ち切られ、費用請求の処理だけが事務的に残された。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-15T21:16:12+09:00] [generated] [組織記録／地図修正の差戻し通知（生成AIによる創作）]
+市区町村の土地宝録管理課から発出された通知書。地番変更に伴う住居表示の更新において、川瀬初江氏名義の居住区画が未登録地として処理されていた不具合についての是正要求。誤った地図データに基づき、住民票の移動通知および郵便物の配達停止措置が自動実行された。システムは「該当区域に建築物は存在しない」と判定し、現実の家屋とその内部で生活する人間の存在を二重に抹消した。苦情の申し立てに対し、担当窓口は「台帳の整合性が優先されるため、現地の実状確認には数カ月の審査期間を要する」と回答し、制度の運用上の遅延がそのまま住民への不利益として固定化された。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-15T21:16:12+09:00] [generated] [AIによる推定復元／整合しない建築面積の再計算（生成AIによる創作）]
+1960年代に故人である建築家AとSが共同で作成した「窓のない百室の模型」の設計図面を、現存する写真と当時のメモから再計算した記録。Aの残した直筆の計算式には、人間の動線や換気に必要な空間の数値が細かく書き込まれていたが、Sの加筆部分は「空間は境界の定義によってのみ成立する」という観念的な記述に終始しており、両者の間には実務と抽象の決定的な乖離があった。AI Aはこの数値の不一致を自動補正しようと試みたが、Aが実際にどのような身体的疲労を抱えてその線を引いたのかを導出することはできなかった。計算結果は常に数平米の誤差を生み出し、そのズレのまま図面は閉じた。
+資料区分: Gemini API無料枠を利用し、当該実行時に新規生成した架空文書。実在の証言ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (bn)：ইন্দ্রি]
+ইন্দ্রি (ইংরেজি: Indri) ভারতের হরিয়ানা রাজ্যের কার্নাল জেলার একটি শহর।
+出典: https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A7%8D%E0%A6%B0%E0%A6%BF
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (bn)：মধ্য আমেরিকার কোরাল সাপ]
+এই প্রজাতির সাপটি বিষাক্ত এলাপিড পরিবারভুক্ত, যেটি মধ্য আমেরিকা থেকে উত্তর কলম্বিয়া পর্যন্ত বিস্তৃত।
+出典: https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%A7%E0%A7%8D%E0%A6%AF_%E0%A6%86%E0%A6%AE%E0%A7%87%E0%A6%B0%E0%A6%BF%E0%A6%95%E0%A6%BE%E0%A6%B0_%E0%A6%95%E0%A7%8B%E0%A6%B0%E0%A6%BE%E0%A6%B2_%E0%A6%B8%E0%A6%BE%E0%A6%AA
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (id)：Unit kerja (perangkat lunak)]
+Ketika unit kerja selesai, unit tersebut akan menyediakan segala sesuatu yang perlu dilakukan untuk mengubah basis data sebagai hasil dari pekerjaan tersebut.
+出典: https://id.wikipedia.org/wiki/Unit_kerja_(perangkat_lunak)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ta)：கண்மாய்]
+கண்மாய் நீர் மக்களுக்கு குடிக்கவும், வேளாண்மைக்கும் பயன்படுகிறது.
+出典: https://ta.wikipedia.org/wiki/%E0%AE%95%E0%AE%A3%E0%AF%8D%E0%AE%AE%E0%AE%BE%E0%AE%AF%E0%AF%8D
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ja)：鉄道信号機]
+鉄道信号機（てつどうしんごうき）英語 railroad signalは、鉄道の線路脇に設置されて前方の状況を運転士に伝える装置である。
+出典: https://ja.wikipedia.org/wiki/%E9%89%84%E9%81%93%E4%BF%A1%E5%8F%B7%E6%A9%9F
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (id)：Universitas Gakushuin]
+Berawal dari institusi pendidikan istana di Kyoto, sekolah ini terus berkembang hingga menjadi menjadi salah satu universitas bergengsi di Jepang hingga kini.
+出典: https://id.wikipedia.org/wiki/Universitas_Gakushuin
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ko)：2006년 전주국제영화제]
+제7회 전주국제영화제는 2006년 4월에 개최된 영화제이다.
+出典: https://ko.wikipedia.org/wiki/2006%EB%85%84_%EC%A0%84%EC%A3%BC%EA%B5%AD%EC%A0%9C%EC%98%81%ED%99%94%EC%A0%9C
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ko)：이재익 (야구 선수)]
+이재익(李在翼, 1994년 3월 18일 ~ )은 KBO 리그 삼성라이온즈의 투수이다.
+出典: https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%9E%AC%EC%9D%B5_(%EC%95%BC%EA%B5%AC_%EC%84%A0%EC%88%98)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (nl)：Thomas Drummond]
+Hij krijgt soms ten onrechte de eer voor de uitvinding van schijnwerpers, ten koste van Sir Goldsworthy Gurney.
+出典: https://nl.wikipedia.org/wiki/Thomas_Drummond
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (bn)：ভারতের রাজ্য সংগীতের তালিকা]
+ভারত দক্ষিণ এশিয়ার একটি দেশ।
+出典: https://bn.wikipedia.org/wiki/%E0%A6%AD%E0%A6%BE%E0%A6%B0%E0%A6%A4%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF_%E0%A6%B8%E0%A6%82%E0%A6%97%E0%A7%80%E0%A6%A4%E0%A7%87%E0%A6%B0_%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (sv)：Tuchořice]
+Tuchořice ligger 303 meter över havet och antalet invånare är 707.
+出典: https://sv.wikipedia.org/wiki/Tucho%C5%99ice
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (bn)：আন্দরকোটি]
+আন্দরকোটি, কোটি বা কোটিয়ান (উর্দু ভাষা; اندر کوٹی) হলো একটি মুসলিম সম্প্রদায় যারা ভারতের আজমীরে এবং পাকিস্তানে বসবাস করে।
+出典: https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%B0%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (nl)：Usedomer Bäderbahn]
+Tevens beheert de UBB op het vasteland van de deelstaat Mecklenburg-Voor-Pommeren de spoorlijnen Züssow - Wolgast en Velgast - Barth.
+出典: https://nl.wikipedia.org/wiki/Usedomer_B%C3%A4derbahn
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ta)：சேலம் (மண்டலம்)]
+இதன் தலைமையகம் சேலம் நகரில் அமைந்துள்ளது.
+出典: https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%87%E0%AE%B2%E0%AE%AE%E0%AF%8D_(%E0%AE%AE%E0%AE%A3%E0%AF%8D%E0%AE%9F%E0%AE%B2%E0%AE%AE%E0%AF%8D)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (vi)：Micromys minutus]
+Loài này được Pallas mô tả năm 1771.
+出典: https://vi.wikipedia.org/wiki/Micromys_minutus
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ja)：アース・スター エンターテイメント]
+株式会社アース・スター エンターテイメント（英: EARTH STAR Entertainment）は、日本の出版社。
+出典: https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%BF%E3%83%BC_%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%86%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ko)：강인준]
+강인준(1987년 10월 27일 ~ )은 대한민국의 축구 선수이며 포지션은 미드필더이다.
+出典: https://ko.wikipedia.org/wiki/%EA%B0%95%EC%9D%B8%EC%A4%80
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (id)：Myanmar Extended-B]
+Myanmar Extended-B adalah blok Unicode yang mengandung karakter aksara Burma untuk penulisan bahasa Pali dan Tai Laing.
+出典: https://id.wikipedia.org/wiki/Myanmar_Extended-B
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (sv)：Saint-Germain-du-Seudre]
+Kommunen ligger i kantonen Saint-Genis-de-Saintonge som ligger i arrondissementet Jonzac.
+出典: https://sv.wikipedia.org/wiki/Saint-Germain-du-Seudre
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (nl)：Station Vauboyen]
+Vauboyen is een station aan lijn V van het Transilien-netwerk gelegen in de Franse gemeente Bièvres in het departement Essonne.
+出典: https://nl.wikipedia.org/wiki/Station_Vauboyen
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ta)：சிந்துப் பிரபந்தம்]
+காஞ்சிபுரம் வரதராசப் பெருமாள் கோயில் கல்வெட்டு ஒன்று இந்த நூலைக் குறிப்பிடுகிறது.
+出典: https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AE%BF%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%81%E0%AE%AA%E0%AF%8D_%E0%AE%AA%E0%AE%BF%E0%AE%B0%E0%AE%AA%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AE%AE%E0%AF%8D
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ja)：塩辛]
+今田 (2003) らによる調査では、明治から昭和初期の伝統的な製法では材料3に対し食塩1（食塩濃度約23 %相当）を加えるものが多かったとしているが経験により季節・魚の鮮度・大きさなどで微調整され、地域や素材（魚種）により塩分量はバラバラである。
+出典: https://ja.wikipedia.org/wiki/%E5%A1%A9%E8%BE%9B
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (sv)：Holmsunds köping]
+Holmsunds köping var en tidigare kommun i Västerbottens län.
+出典: https://sv.wikipedia.org/wiki/Holmsunds_k%C3%B6ping
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (nl)：Ectropis excursaria]
+Tephrosia exportaria) is een vlinder uit de familie van de spanners, de Geometridae.
+出典: https://nl.wikipedia.org/wiki/Ectropis_excursaria
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (nl)：Asso (Italië)]
+Asso is een gemeente in de Italiaanse provincie Como (regio Lombardije) en telt 3382 inwoners (31-12-2004).
+出典: https://nl.wikipedia.org/wiki/Asso_(Itali%C3%AB)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (bn)：ঘর টিকটিকি]
+এটি প্রশান্ত মহাসাগরীয় গৃহটিকটিকি, এশীয় গৃহটিকটিকি,দেয়াল টিকটিকি,গৃহগিরগিটি,বা চন্দ্রগিরগিটি নামেও পরিচিত।
+出典: https://bn.wikipedia.org/wiki/%E0%A6%98%E0%A6%B0_%E0%A6%9F%E0%A6%BF%E0%A6%95%E0%A6%9F%E0%A6%BF%E0%A6%95%E0%A6%BF
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ja)：ほんとにあった怖い話]
+『ほんとにあった怖い話』（ほんとにあったこわいはなし）は、学校の怪談など、本当に起こった（とされている）怖い話を集めた朝日新聞出版刊のホラーコミックおよび、それを基に制作されたオリジナルビデオと、さらにそれを基に制作されたフジテレビのテレビドラマである。
+出典: https://ja.wikipedia.org/wiki/%E3%81%BB%E3%82%93%E3%81%A8%E3%81%AB%E3%81%82%E3%81%A3%E3%81%9F%E6%80%96%E3%81%84%E8%A9%B1
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (vi)：Naiopegia xiphagrostis]
+Loài này được Wilson & Keable miêu tả khoa học năm 2002.
+出典: https://vi.wikipedia.org/wiki/Naiopegia_xiphagrostis
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ko)：유엔 안전 보장 이사회 결의 제350호]
+유엔 병력 철수 감시군은 처음 6개월 동안 설립되었지만 후속 결의안에 따라 임무가 갱신되었다.
+出典: https://ko.wikipedia.org/wiki/%EC%9C%A0%EC%97%94_%EC%95%88%EC%A0%84_%EB%B3%B4%EC%9E%A5_%EC%9D%B4%EC%82%AC%ED%9A%8C_%EA%B2%B0%EC%9D%98_%EC%A0%9C350%ED%98%B8
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ta)：புனேர் மாவட்டம்]
+இம்மாவட்டத்தில் பௌத்த தொல்லியல் களமான ராணிகட் உள்ளது.
+出典: https://ta.wikipedia.org/wiki/%E0%AE%AA%E0%AF%81%E0%AE%A9%E0%AF%87%E0%AE%B0%E0%AF%8D_%E0%AE%AE%E0%AE%BE%E0%AE%B5%E0%AE%9F%E0%AF%8D%E0%AE%9F%E0%AE%AE%E0%AF%8D
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ko)：특수 범죄 처벌에 관한 특별법]
+특수 범죄 처벌에 관한 특별법은 박정희에 의한 군사정변이 있은 직후 국가재건임시조치법을 통해 '국가재건최고회의는 군사혁명이전 또는 이후에 반국가적 반민족적 부정행위 또는 반혁명적 행위를 처벌하기 위하여 특별법을 제정할 수 있다'는 규정에 의하여 해당 행위자를 처벌하기 위하여 만든 법률이다.
+出典: https://ko.wikipedia.org/wiki/%ED%8A%B9%EC%88%98_%EB%B2%94%EC%A3%84_%EC%B2%98%EB%B2%8C%EC%97%90_%EA%B4%80%ED%95%9C_%ED%8A%B9%EB%B3%84%EB%B2%95
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (vi)：Apate westermanni]
+Apate Westermanni là một loài bọ cánh cứng trong họ Bostrichidae.
+出典: https://vi.wikipedia.org/wiki/Apate_westermanni
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (vi)：Guettarda deamii]
+Guettarda deamii là một loài thực vật có hoa trong họ Thiến thảo.
+出典: https://vi.wikipedia.org/wiki/Guettarda_deamii
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (id)：Marcel Breuer]
+Marcel Lajos Breuer ( 21 Mei 1902 – 1 Juli 1981) adalah seorang perancang peabotan, arsitek dan modernis kelahiran Hungaria.
+出典: https://id.wikipedia.org/wiki/Marcel_Breuer
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ja)：ルセ (曖昧さ回避)]
+ルセ キリル文字：Русе、ラテン文字：Ruse ルセ - ブルガリア北部の都市 ルセ州 - ブルガリア北部の州 FCドゥナフ・ルセ - ルセに本拠地を置くサッカークラブ フランス語: Rousset クリストフ・ルセ - フランスのチェンバロ奏者・指揮者
+出典: https://ja.wikipedia.org/wiki/%E3%83%AB%E3%82%BB_(%E6%9B%96%E6%98%A7%E3%81%95%E5%9B%9E%E9%81%BF)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (id)：Daftar Merah IUCN]
+Berdasarkan asesmen yang telah dilakukan, terjadi peningkatan jumlah spesies yang masuk ke daftar merah dari waktu ke waktu.
+出典: https://id.wikipedia.org/wiki/Daftar_Merah_IUCN
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (vi)：Trichobyrrhulus arragonicus]
+Trichobyrrhulus arragonicus là một loài bọ cánh cứng trong họ Byrrhidae.
+出典: https://vi.wikipedia.org/wiki/Trichobyrrhulus_arragonicus
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (ta)：நிழல்கள் (திரைப்படம்)]
+இத்திரைப்படம் வணிகரீதியாக தோல்வியடைந்தது.
+出典: https://ta.wikipedia.org/wiki/%E0%AE%A8%E0%AE%BF%E0%AE%B4%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D_(%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%88%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%AE%E0%AF%8D)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-15T21:16:12+09:00] [external] [Wikipedia (sv)：Neoleucopis orbiseta]
+Neoleucopis orbiseta ingår i släktet Neoleucopis, och familjen markflugor.
+出典: https://sv.wikipedia.org/wiki/Neoleucopis_orbiseta
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
