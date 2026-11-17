@@ -1,26 +1,23 @@
 {
-  "run_at": "2026-11-17T12:45:17+09:00",
+  "run_at": "2026-11-17T21:33:22+09:00",
   "trigger": "schedule",
-  "run_id": "44012347778",
-  "previous_run_at": "2026-11-17T05:58:30+09:00",
+  "run_id": "44084200866",
+  "previous_run_at": "2026-11-17T12:45:17+09:00",
   "gemini": {
     "status": "error",
-    "detail": "AttributeError: 'list' object has no attribute 'get'",
+    "detail": "HTTPError: HTTP Error 503: Service Unavailable",
     "new": 0
   },
   "aozora": {
-    "status": "no_results",
-    "fetched": 0
+    "status": "not_due"
   },
   "wikipedia": {
-    "status": "ok",
-    "fetched": 40,
-    "target_max": 40
+    "status": "not_due"
   },
   "new": {
     "generated": 0,
     "aozora": 0,
-    "external": 39
+    "external": 0
   },
   "errors": [],
   "last_success": {
@@ -30,5 +27,16 @@
   },
   "stale_external_collection": false,
   "total_unique": 870,
-  "published_bits": "3734832"
+  "published_bits": "3734832",
+  "v5_policy": {
+    "story_documents_per_ai_success": 3,
+    "kk_documents_per_ai_success": 1,
+    "wikipedia_max_per_day": 3,
+    "aozora_max_per_day": 2,
+    "stream_target_percent": {
+      "story": 70,
+      "kk": 20,
+      "external": 10
+    }
+  }
 }
