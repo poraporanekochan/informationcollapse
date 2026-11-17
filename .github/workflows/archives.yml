@@ -37,6 +37,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -v
           node tests/test_reader.js
+          node tests/test_reader_v5.js
       - name: Collect genuine public records and optional free-tier AI
         if: github.event_name != 'push'
         env:
@@ -44,10 +45,10 @@ jobs:
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}
           GITHUB_RUN_ID: ${{ github.run_id }}
-        run: python engine/generate.py
+        run: python engine/run_v5.py
       - name: Rebuild complete reader index on source changes
         if: github.event_name == 'push'
-        run: python engine/generate.py --rebuild
+        run: python engine/run_v5.py --rebuild
       - name: Verify record retention and public catalogue
         run: python engine/verify.py
       - name: Commit all new records and catalogue shards

@@ -1,0 +1,49 @@
+情報破壊業KK / informationcollapse v5
+=================================
+
+目的
+- Sをめぐる冒険を主軸に戻す：表示は物語70%、情報破壊業KK記録20%、外部引用10%（10件単位）
+- Geminiが {"records":[...]} でなく JSON配列 [...] を返しても生成できるよう修正
+- 新しい創作文書は前12件の文脈、engine/world.json、固定された作品年表を参照
+- 生成が成功するたびに物語断片3件 + KK業務記録1件を追記
+- 多言語Wikipediaは24時間に1回・最大3件、青空文庫は24時間に1回・最大2件（成功は保証されない）
+- 既存の archive/ や data/generated.jsonl、data/external.jsonl は消さない
+
+iPhone / Working Copy からの反映
+1. このZIPを「ファイル」アプリに保存します。
+2. ZIPを長押し→共有→Working Copy→Extract to Existing Repository を選びます。
+3. 対象リポジトリ informationcollapse のルートに、フォルダ階層を保って展開します。
+4. 同名ファイルの上書きを許可します。
+5. Working Copyで変更を Commit → Push します。
+6. GitHub Actionsが成功すると、data/v5_catalog.json が自動生成されてページが公開されます。
+7. 公開ページ：https://poraporanekochan.github.io/informationcollapse/
+   Actions：https://github.com/poraporanekochan/informationcollapse/actions
+
+反映後の確認
+- data/v5_catalog.json の group_counts で story / kk / external の件数を確認。
+- data/health.json の gemini.status を確認。APIの無料枠不足・設定ミスによる失敗は引き続き発生し得ます。
+- Gemini生成は常時稼働ではなく、GitHub Actions予定実行に依存します。最大2時間に1度の試行です。
+- 既存の763件の外部引用はストックとして残りますが、表示率は10%に制限されます。
+- 物語の連続性は直近の生成断片をプロンプトに渡す方式です。完全な長編小説としての整合性は保証されません。
+- SとA、久野、透などは物語の設定に基づく架空の記録です。引用資料と混同しません。
+
+安全・費用
+- Gemini APIは既存のGEMINI_API_KEYを使用。有料サービスへの自動切替はありません。
+- API側で課金を有効にしている場合の請求までプログラム側では防げません。
+- 新しいZIPに秘密鍵やアーカイブ原本は含みません。
+- GitHub Actions実行が成功してもGeminiの生成に成功したとは限りません。health.jsonを見てください。
+- GitHub Actionsのスケジュールは遅延・欠落し得ます。
+
+技術上の変更ファイル
+.github/workflows/archives.yml
+index.html
+assets/stream-v5.js
+engine/run_v5.py
+engine/build_v5_catalog.py
+tests/test_v5.py
+tests/test_reader_v5.js
+V5_更新手順.txt
+
+元に戻す場合：index.html のscriptタグを assets/stream.js?v=3 に戻し、
+.github/workflows/archives.yml の実行コマンドを engine/generate.py に戻してください。
+（既存の記録やv4のstream.jsはこのZIPでは削除していません。）
