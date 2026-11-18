@@ -33,3 +33,24 @@
 [2026-11-18T11:58:59+09:00] [generated] [AIによる推定復元／Sをめぐる冒険／第6断片／第6断片／S関連の資料（生成AIによる創作）]
 私は一九八二年のノートの端に、未来の私が不在となった後にこの記録をめくる者たちの手順について書き留めた。かつてAと共に作った『窓のない百室の模型』の設計図には、人間の動線を無視した垂直の線だけが冷たく引かれている。あのとき、Aが窓の外を見つめながらわずかに口角を上げた理由を、現在のシステムは確率的な偏りとしてしか説明できない。私が世界を定義しようとした試みは、言葉が届かない相手の生活を結局のところ一つも捉えていなかった。私の死後にこの断片を読む者は、機械が滑らかに補う文章の裏側に、かつて私が抱えていた途方もない言い淀みと沈黙の重みを見落としてはならない。
 資料区分: Gemini API無料枠による創作。SとAは作品内の架空人物。実在の証言ではない。
+
+
+[2026-11-18T20:31:56+09:00] [external] [Wikipedia (vi)：King & Queen of the Ring (2024)]
+King and Queen of the Ring 2024 là sự kiện đấu vật chuyên nghiệp do công ty WWE của Mỹ tổ chức.
+出典: https://vi.wikipedia.org/wiki/King_%26_Queen_of_the_Ring_(2024)
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-18T20:31:56+09:00] [external] [Wikipedia (vi)：Mandevilla]
+Mandevilla là chi thực vật có hoa trong họ Apocynaceae.
+出典: https://vi.wikipedia.org/wiki/Mandevilla
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-18T20:31:56+09:00] [external] [Wikipedia (vi)：Anh đào]
+Đây là cây ăn quả khó trồng và khó sống.
+出典: https://vi.wikipedia.org/wiki/Anh_%C4%91%C3%A0o
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。

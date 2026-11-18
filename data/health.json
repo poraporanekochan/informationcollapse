@@ -1,33 +1,37 @@
 {
-  "run_at": "2026-11-18T11:58:59+09:00",
+  "run_at": "2026-11-18T20:31:56+09:00",
   "trigger": "schedule",
-  "run_id": "44227117625",
-  "previous_run_at": "2026-11-18T06:19:04+09:00",
+  "run_id": "44295468763",
+  "previous_run_at": "2026-11-18T11:58:59+09:00",
   "gemini": {
-    "status": "ok",
-    "detail": "",
-    "new": 4
+    "status": "error",
+    "detail": "HTTPError: HTTP Error 503: Service Unavailable",
+    "new": 0
   },
   "aozora": {
-    "status": "not_due"
+    "status": "no_results",
+    "fetched": 0,
+    "target_max": 2
   },
   "wikipedia": {
-    "status": "not_due"
+    "status": "ok",
+    "fetched": 3,
+    "target_max": 3
   },
   "new": {
-    "generated": 3,
+    "generated": 0,
     "aozora": 0,
-    "external": 0
+    "external": 3
   },
   "errors": [],
   "last_success": {
     "gemini": "2026-11-18T11:58:59+09:00",
     "aozora": null,
-    "wikipedia": "2026-11-17T12:45:17+09:00"
+    "wikipedia": "2026-11-18T20:31:56+09:00"
   },
   "stale_external_collection": false,
-  "total_unique": 877,
-  "published_bits": "3795648",
+  "total_unique": 880,
+  "published_bits": "3805960",
   "v5_policy": {
     "story_documents_per_ai_success": 3,
     "kk_documents_per_ai_success": 1,
