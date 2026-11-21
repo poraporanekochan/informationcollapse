@@ -1,13 +1,13 @@
 {
-  "published_bits": "4122656",
-  "document_count": 60,
-  "record_count": 918,
-  "unique_visible_record_count": 918,
-  "shard_count": 380,
-  "ai_generated_count": 79,
+  "published_bits": "4159864",
+  "document_count": 61,
+  "record_count": 922,
+  "unique_visible_record_count": 922,
+  "shard_count": 384,
+  "ai_generated_count": 83,
   "external_record_count": 772,
   "aozora_record_count": 0,
-  "last_actual_ai_generation": "2026-11-21T21:34:11+09:00",
-  "as_of": "2026-11-21T21:34:11+09:00",
+  "last_actual_ai_generation": "2026-11-22T04:46:23+09:00",
+  "as_of": "2026-11-22T04:46:23+09:00",
   "definition": "archive/内の公開TXTファイルをUTF-8で符号化した実バイト数×8。ブラウザの表示ビット数とは別。"
 }
