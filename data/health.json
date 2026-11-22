@@ -1,8 +1,8 @@
 {
-  "run_at": "2026-11-22T23:54:31+09:00",
+  "run_at": "2026-11-23T06:01:43+09:00",
   "trigger": "schedule",
-  "run_id": "45035336977",
-  "previous_run_at": "2026-11-22T15:36:27+09:00",
+  "run_id": "45069699719",
+  "previous_run_at": "2026-11-22T23:54:31+09:00",
   "gemini": {
     "status": "error",
     "detail": "HTTPError: HTTP Error 503: Service Unavailable",
