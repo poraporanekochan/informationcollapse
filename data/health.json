@@ -1,12 +1,12 @@
 {
-  "run_at": "2026-11-23T18:47:09+09:00",
+  "run_at": "2026-11-24T06:44:45+09:00",
   "trigger": "schedule",
-  "run_id": "45150115674",
-  "previous_run_at": "2026-11-23T10:36:23+09:00",
+  "run_id": "45272735938",
+  "previous_run_at": "2026-11-23T18:47:09+09:00",
   "gemini": {
-    "status": "ok",
-    "detail": "",
-    "new": 4
+    "status": "error",
+    "detail": "HTTPError: HTTP Error 503: Service Unavailable",
+    "new": 0
   },
   "aozora": {
     "status": "not_due"
@@ -15,7 +15,7 @@
     "status": "not_due"
   },
   "new": {
-    "generated": 4,
+    "generated": 0,
     "aozora": 0,
     "external": 0
   },
