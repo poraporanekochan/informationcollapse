@@ -1,27 +1,23 @@
 {
-  "run_at": "2026-11-24T14:37:22+09:00",
+  "run_at": "2026-11-25T01:30:52+09:00",
   "trigger": "schedule",
-  "run_id": "45334592228",
-  "previous_run_at": "2026-11-24T06:44:45+09:00",
+  "run_id": "45437969238",
+  "previous_run_at": "2026-11-24T14:37:22+09:00",
   "gemini": {
     "status": "error",
-    "detail": "HTTPError: HTTP Error 503: Service Unavailable",
+    "detail": "TimeoutError: The read operation timed out",
     "new": 0
   },
   "aozora": {
-    "status": "no_results",
-    "fetched": 0,
-    "target_max": 2
+    "status": "not_due"
   },
   "wikipedia": {
-    "status": "ok",
-    "fetched": 3,
-    "target_max": 3
+    "status": "not_due"
   },
   "new": {
     "generated": 0,
     "aozora": 0,
-    "external": 3
+    "external": 0
   },
   "errors": [],
   "last_success": {
