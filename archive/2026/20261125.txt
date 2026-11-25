@@ -18,3 +18,24 @@
 [2026-11-25T10:03:32+09:00] [generated] [情報破壊業KK／情報破壊業KK／業務報告（生成AIによる創作）]
 2026年11月15日、情報破壊業KK文書管理部門による追加検証。故Sが遺した解体現場の土壌試料および関連する測量データについての調査結果。回収された試料における物質組成は、当時の都市再開発プロセスにおける一般的な建築廃材の範疇であり、特定の違法投棄や隠蔽工作を示すものではない。1971年の台帳脱落事故に起因する影響についても、行政上の最適化プロセスにおける許容範囲内の端数処理であり、組織としての賠償責任は発生しない。情報は正しく処理されるほど生活の重みを切り捨てるが、それは適法な業務手続きの範囲内である。記録の検証は冷徹な点検作業として継続され、責任の所在は特定の個人ではなく組織の手続きに帰属する。
 資料区分: Gemini API無料枠による創作。SとAは作品内の架空人物。実在の証言ではない。
+
+
+[2026-11-25T18:47:35+09:00] [external] [Wikipedia (es)：Vireolanius pulchellus]
+Es nativo de México y América Central.
+出典: https://es.wikipedia.org/wiki/Vireolanius_pulchellus
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-25T18:47:35+09:00] [external] [Wikipedia (es)：Sally Sarr]
+Sally Sarr (Francia; 6 de mayo de 1986) es un futbolista francés nacionalizado mauritano.
+出典: https://es.wikipedia.org/wiki/Sally_Sarr
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
+
+
+[2026-11-25T18:47:35+09:00] [external] [Wikipedia (es)：Antibes]
+​ Juan-les-Pins es una zona turística que pertenece a esta localidad.
+出典: https://es.wikipedia.org/wiki/Antibes
+利用条件: CC BY-SA 4.0; https://creativecommons.org/licenses/by-sa/4.0/
+資料区分: 公開記事の一文を引用。全文ではなく抜粋。ウェブ全体からの一様な無作為標本ではない。
