@@ -1,37 +1,33 @@
 {
-  "run_at": "2026-11-26T20:28:25+09:00",
+  "run_at": "2026-11-27T05:31:15+09:00",
   "trigger": "schedule",
-  "run_id": "45810868550",
-  "previous_run_at": "2026-11-26T11:29:58+09:00",
+  "run_id": "45891603658",
+  "previous_run_at": "2026-11-26T20:28:25+09:00",
   "gemini": {
     "status": "ok",
     "detail": "",
     "new": 4
   },
   "aozora": {
-    "status": "no_results",
-    "fetched": 0,
-    "target_max": 2
+    "status": "not_due"
   },
   "wikipedia": {
-    "status": "ok",
-    "fetched": 3,
-    "target_max": 3
+    "status": "not_due"
   },
   "new": {
     "generated": 4,
     "aozora": 0,
-    "external": 3
+    "external": 0
   },
   "errors": [],
   "last_success": {
-    "gemini": "2026-11-26T20:28:25+09:00",
+    "gemini": "2026-11-27T05:31:15+09:00",
     "aozora": null,
     "wikipedia": "2026-11-26T20:28:25+09:00"
   },
   "stale_external_collection": false,
-  "total_unique": 965,
-  "published_bits": "4467944",
+  "total_unique": 969,
+  "published_bits": "4500560",
   "v5_policy": {
     "story_documents_per_ai_success": 3,
     "kk_documents_per_ai_success": 1,
