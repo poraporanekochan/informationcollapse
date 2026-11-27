@@ -1,8 +1,8 @@
 {
-  "run_at": "2026-11-27T05:31:15+09:00",
+  "run_at": "2026-11-27T12:14:40+09:00",
   "trigger": "schedule",
-  "run_id": "45891603658",
-  "previous_run_at": "2026-11-26T20:28:25+09:00",
+  "run_id": "45932997000",
+  "previous_run_at": "2026-11-27T05:31:15+09:00",
   "gemini": {
     "status": "ok",
     "detail": "",
@@ -21,13 +21,13 @@
   },
   "errors": [],
   "last_success": {
-    "gemini": "2026-11-27T05:31:15+09:00",
+    "gemini": "2026-11-27T12:14:40+09:00",
     "aozora": null,
     "wikipedia": "2026-11-26T20:28:25+09:00"
   },
   "stale_external_collection": false,
-  "total_unique": 969,
-  "published_bits": "4500560",
+  "total_unique": 973,
+  "published_bits": "4534776",
   "v5_policy": {
     "story_documents_per_ai_success": 3,
     "kk_documents_per_ai_success": 1,
